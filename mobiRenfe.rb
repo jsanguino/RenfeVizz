@@ -8,7 +8,7 @@ session.use "renfe_vizz"
 @driver = Selenium::WebDriver.for :firefox
 @base_url = "http://renfe.mobi"
 @accept_next_alert = true
-@driver.manage.timeouts.implicit_wait = 30
+@driver.manage.timeouts.implicit_wait = 5
 @verification_errors = []
 
 @driver.get(@base_url + "/renfev2/busca_trenes.do")
@@ -23,17 +23,17 @@ end
 @counter = 0;
 
 #Check sanity of the new array
-  for i in (0).upto(all_cities.length-2)
-    for j in (0).upto(all_cities.length-2)
+for i in (0).upto(all_cities.length-2)
+  for j in (0).upto(all_cities.length-2)
 
-      puts "I: #{i} J: #{j}"  
-      puts "Departure is: " + all_cities[i]
-      puts "Arrival is: " + all_cities[j]
-      puts "..............................."
-      @counter = @counter + 1
-      puts @counter
-    end
- end
+    puts "I: #{i} J: #{j}"  
+    puts "Departure is: " + all_cities[i]
+    puts "Arrival is: " + all_cities[j]
+    puts "..............................."
+    @counter = @counter + 1
+    puts @counter
+  end
+end
 
 #Iterate all the combination of Cities
 
@@ -44,7 +44,7 @@ for i in (0).upto(all_cities.length-2)
 
     o = all_cities[i]
     d = all_cities[j]
-    
+
     puts "Departure is: " + o
     puts "Arrival is: " + d
 
@@ -58,8 +58,15 @@ for i in (0).upto(all_cities.length-2)
     # wait for the result
     wait = Selenium::WebDriver::Wait.new(:timeout => 10)
 
+   #puts @driver.find_elements(:xpath, ".//*[@id='resultados']/ul").size()
+   
    #Journey does exist?
    if @driver.find_elements(:xpath, ".//*[@id='details']/p/a").size()>0
+    next
+  end
+
+  #Journey does exist?
+  if @driver.find_elements(:xpath, ".//*[@id='resultados']/ul").size()==0
     next
   end
   
