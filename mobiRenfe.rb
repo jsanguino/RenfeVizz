@@ -13,7 +13,20 @@ session.use "renfe_vizz"
 
 @driver.get(@base_url + "/renfev2/busca_trenes.do;jsessionid=FF8ECCC7F2B53A47187445D06C1AF1A9?ss=FF8ECCC7F2B53A47187445D06C1AF1A9&ga=true")
 
+all_optionsO = @driver.find_element(:name, "o").find_elements(:tag_name, "option")
+all_optionsD = @driver.find_element(:name, "d").find_elements(:tag_name, "option")
 
+
+for i in (1).upto(all_optionsO.length)
+  for j in (1).upto(all_optionsO.length)
+    o = all_optionsO[i].text
+    d = all_optionsD[j].text
+    puts "Departure is: " + o
+    puts "Arrival is: " + d
+    all_optionsO[i].click
+    all_optionsD[j].click
+  end 
+end  
 
 o = "Sevilla"
 d = "Granada"
@@ -41,14 +54,14 @@ wait.until {
   	@tname = @driver.find_elements(:xpath, ".//*[@id='resultados']/ul[#{i}]/li[1]/a")
   	puts @tname.first.text
     @trains[[i,0]]= @tname.first.text
-  	@departure = @driver.find_elements(:xpath, ".//*[@id='resultados']/ul[#{i}]/li[2]")
-  	puts @departure.first.text.split[1]
+    @departure = @driver.find_elements(:xpath, ".//*[@id='resultados']/ul[#{i}]/li[2]")
+    puts @departure.first.text.split[1]
     @trains[[i,1]]= @departure.first.text.split[1]
-  	@arrival = @driver.find_elements(:xpath, ".//*[@id='resultados']/ul[#{i}]/li[3]")
-  	puts @arrival.first.text.split[1]
+    @arrival = @driver.find_elements(:xpath, ".//*[@id='resultados']/ul[#{i}]/li[3]")
+    puts @arrival.first.text.split[1]
     @trains[[i,2]] = @arrival.first.text.split[1]
-  	@duration = @driver.find_elements(:xpath, ".//*[@id='resultados']/ul[#{i}]/li[4]")
-  	hours = @duration.first.text.split[1]
+    @duration = @driver.find_elements(:xpath, ".//*[@id='resultados']/ul[#{i}]/li[4]")
+    hours = @duration.first.text.split[1]
     mins = @duration.first.text.split[3]
     ttime = hours.to_i*60 + mins.to_i
     puts ttime
@@ -66,13 +79,12 @@ journeys.insert( oCity: o, dCity: d, ntrains: @allTrains.length);
 
 #Add to DB every Train for this Journey
 for i in (@allTrains.length).downto(1)
-journeys.find(oCity: o, dCity: d).update("$addToSet" => { "trains" => { "tname" => @trains[[i,0]], 
-  "departure" => @trains[[i,1]], "arrival" => @trains[[i,2]], "duration" => @trains[[i,3]]}});
+  journeys.find(oCity: o, dCity: d).update("$addToSet" => { "trains" => { "tname" => @trains[[i,0]], 
+    "departure" => @trains[[i,1]], "arrival" => @trains[[i,2]], "duration" => @trains[[i,3]]}});
 end
 
 puts "Total trains #{@allTrains.length}"
 puts "Total journeys in DB #{journeys.find.count}"
 
-@driver.navigate.back
-
+#@driver.navigate.back
 #@driver.quit
