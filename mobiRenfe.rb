@@ -13,21 +13,38 @@ session.use "renfe_vizz"
 
 @driver.get(@base_url + "/renfev2/busca_trenes.do")
 
-all_optionsO = @driver.find_element(:name, "o").find_elements(:tag_name, "option")
-all_optionsD = @driver.find_element(:name, "d").find_elements(:tag_name, "option")
+all_cities = @driver.find_element(:name, "o").find_elements(:tag_name, "option")
+
+#Clean array of cities from objects to strings
+for i in (1).upto(all_cities.length-1)
+  all_cities[i-1] = all_cities[i].text
+end
+
+@counter = 0;
+
+#Check sanity of the new array
+  for i in (0).upto(all_cities.length-2)
+    for j in (0).upto(all_cities.length-2)
+
+      puts "I: #{i} J: #{j}"  
+      puts "Departure is: " + all_cities[i]
+      puts "Arrival is: " + all_cities[j]
+      puts "..............................."
+      @counter = @counter + 1
+      puts @counter
+    end
+ end
 
 #Iterate all the combination of Cities
 
-for i in (1).upto(all_optionsO.length)
-  for j in (1).upto(all_optionsD.length)
+for i in (0).upto(all_cities.length-2)
+  for j in (0).upto(all_cities.length-2)
 
     @driver.navigate.back
 
-    all_optionsO = @driver.find_element(:name, "o").find_elements(:tag_name, "option")
-    all_optionsD = @driver.find_element(:name, "d").find_elements(:tag_name, "option")
-
-    o = all_optionsO[i].text
-    d = all_optionsD[j].text
+    o = all_cities[i]
+    d = all_cities[j]
+    
     puts "Departure is: " + o
     puts "Arrival is: " + d
 
@@ -39,12 +56,12 @@ for i in (1).upto(all_optionsO.length)
     @driver.find_element(:name, "horario").click
 
     # wait for the result
-   wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+    wait = Selenium::WebDriver::Wait.new(:timeout => 10)
 
    #Journey does exist?
    if @driver.find_elements(:xpath, ".//*[@id='details']/p/a").size()>0
     next
-   end
+  end
   
    #Get All trains for a trip
    @trains= Hash.new
