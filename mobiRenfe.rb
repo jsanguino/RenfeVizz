@@ -19,38 +19,45 @@ all_optionsD = @driver.find_element(:name, "d").find_elements(:tag_name, "option
 
 for i in (1).upto(all_optionsO.length)
   for j in (1).upto(all_optionsO.length)
+
+    @driver.get(@base_url + "/renfev2/busca_trenes.do;jsessionid=FF8ECCC7F2B53A47187445D06C1AF1A9?ss=FF8ECCC7F2B53A47187445D06C1AF1A9&ga=true")
+
+    all_optionsO = @driver.find_element(:name, "o").find_elements(:tag_name, "option")
+    all_optionsD = @driver.find_element(:name, "d").find_elements(:tag_name, "option")
+
     o = all_optionsO[i].text
     d = all_optionsD[j].text
     puts "Departure is: " + o
     puts "Arrival is: " + d
-    all_optionsO[i].click
-    all_optionsD[j].click
-  end 
-end  
 
-o = "Sevilla"
-d = "Granada"
+    @driver.find_element(:name, "o").send_keys o
+    @driver.find_element(:name, "d").send_keys d
+    @driver.find_element(:name, "DF").send_keys "11"
+    @driver.find_element(:name, "MF").send_keys "Julio"
+    @driver.find_element(:name, "AF").send_keys "2013"
+    @driver.find_element(:name, "horario").click
 
-@driver.find_element(:name, "o").send_keys o
-@driver.find_element(:name, "d").send_keys d
-@driver.find_element(:name, "DF").send_keys "11"
-@driver.find_element(:name, "MF").send_keys "Julio"
-@driver.find_element(:name, "AF").send_keys "2013"
-@driver.find_element(:name, "horario").click
+    # wait for the result
+   wait = Selenium::WebDriver::Wait.new(:timeout => 10)
 
-# wait for the result
-wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+   #Journey does exist?
+   if @driver.find_elements(:xpath, ".//*[@id='details']/p/a").first.text == "Buscar Trayecto con transbordo"
+    next
+   else
+   puts "hello world 0"
 
-#Get All trains for a trip
-@allTrains
-@trains= Hash.new
+   #Get All trains for a trip
+   @allTrains
+   @trains= Hash.new
+   puts "hello world 1"
 
-wait.until {
+   wait.until {
 
-  @allTrains = @driver.find_elements(:xpath, ".//*[@id='resultados']/ul[*]/li[1]/a")
+   puts "hello world 2"
+   @allTrains = @driver.find_elements(:xpath, ".//*[@id='resultados']/ul[*]/li[1]/a")
 
-  #parse type of train, schedule, time travel
-  for i in (@allTrains.length).downto(1)
+   #parse type of train, schedule, time travel
+   for i in (@allTrains.length).downto(1)
   	@tname = @driver.find_elements(:xpath, ".//*[@id='resultados']/ul[#{i}]/li[1]/a")
   	puts @tname.first.text
     @trains[[i,0]]= @tname.first.text
@@ -85,6 +92,12 @@ end
 
 puts "Total trains #{@allTrains.length}"
 puts "Total journeys in DB #{journeys.find.count}"
+
+
+#@driver.navigate.back
+end
+end 
+end  
 
 #@driver.navigate.back
 #@driver.quit
