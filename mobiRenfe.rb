@@ -13,6 +13,8 @@ session.use "renfe_vizz"
 
 @driver.get(@base_url + "/renfev2/busca_trenes.do;jsessionid=FF8ECCC7F2B53A47187445D06C1AF1A9?ss=FF8ECCC7F2B53A47187445D06C1AF1A9&ga=true")
 
+
+
 o = "Sevilla"
 d = "Granada"
 
@@ -34,19 +36,23 @@ wait.until {
 
   @allTrains = @driver.find_elements(:xpath, ".//*[@id='resultados']/ul[*]/li[1]/a")
 
+  #parse type of train, schedule, time travel
   for i in (@allTrains.length).downto(1)
   	@tname = @driver.find_elements(:xpath, ".//*[@id='resultados']/ul[#{i}]/li[1]/a")
   	puts @tname.first.text
     @trains[[i,0]]= @tname.first.text
   	@departure = @driver.find_elements(:xpath, ".//*[@id='resultados']/ul[#{i}]/li[2]")
-  	puts @departure.first.text
-    @trains[[i,1]]= @departure.first.text
+  	puts @departure.first.text.split[1]
+    @trains[[i,1]]= @departure.first.text.split[1]
   	@arrival = @driver.find_elements(:xpath, ".//*[@id='resultados']/ul[#{i}]/li[3]")
-  	puts @arrival.first.text
-    @trains[[i,2]] = @arrival.first.text
+  	puts @arrival.first.text.split[1]
+    @trains[[i,2]] = @arrival.first.text.split[1]
   	@duration = @driver.find_elements(:xpath, ".//*[@id='resultados']/ul[#{i}]/li[4]")
-  	puts @duration.first.text
-    @trains[[i,3]]= @duration.first.text
+  	hours = @duration.first.text.split[1]
+    mins = @duration.first.text.split[3]
+    ttime = hours.to_i*60 + mins.to_i
+    puts ttime
+    @trains[[i,3]]= ttime
   end
 
   @allTrains if @allTrains.length > 0
@@ -55,10 +61,10 @@ wait.until {
 #Writes in the DB
 journeys = session[:journeys]
 
-#Add general data of this Journey
+#Add to DB general data of this Journey
 journeys.insert( oCity: o, dCity: d, ntrains: @allTrains.length);
 
-#Add every Train for this Journey
+#Add to DB every Train for this Journey
 for i in (@allTrains.length).downto(1)
 journeys.find(oCity: o, dCity: d).update("$addToSet" => { "trains" => { "tname" => @trains[[i,0]], 
   "departure" => @trains[[i,1]], "arrival" => @trains[[i,2]], "duration" => @trains[[i,3]]}});
@@ -66,5 +72,7 @@ end
 
 puts "Total trains #{@allTrains.length}"
 puts "Total journeys in DB #{journeys.find.count}"
+
+@driver.navigate.back
 
 #@driver.quit
