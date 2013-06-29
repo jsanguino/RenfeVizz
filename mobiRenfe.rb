@@ -11,6 +11,7 @@ journeys = session[:journeys]
 @base_url = "http://renfe.mobi"
 #@accept_next_alert = true
 @driver.manage.timeouts.implicit_wait = 5
+
 #@verification_errors = []
 
 @driver.get(@base_url + "/renfev2/busca_trenes.do")
@@ -37,25 +38,15 @@ for i in (0).upto(all_cities.length-2)
   end
 end
 
-#Iterate all the combination of Cities
 
-for i in (0).upto(all_cities.length-2)
-  for j in (0).upto(all_cities.length-2)
+def queryJourney(o, d)
 
-    puts "Vamos a refrescar pagina con I: #{i} J: #{j}"
-    @driver.navigate.back
-    puts "Refrescada con I: #{i} J: #{j}"
+  @driver.get(@base_url + "/renfev2/busca_trenes.do")
 
-    o = all_cities[i]
-    d = all_cities[j]
-
-    puts "Departure is: " + o
-    puts "Arrival is: " + d
-
-    # wait for the result
+    # waiter for the result
     wait = Selenium::WebDriver::Wait.new(:timeout => 30)
 
-    #Check if the Buscar button is displayed before filling the form
+    #Check if the "Buscar" button is displayed before filling the form
     wait.until { 
      button = @driver.find_elements(:xpath, ".//*[@id='details']/form/input[2]")
      puts "Existe boton busqueda #{button.first.text}"
@@ -67,24 +58,63 @@ for i in (0).upto(all_cities.length-2)
    @driver.find_element(:name, "DF").send_keys "11"
    @driver.find_element(:name, "MF").send_keys "Julio"
    @driver.find_element(:name, "AF").send_keys "2013"
-   @driver.find_element(:name, "horario").click
 
+   #TODO check if o and d have been selected 
 
-   #Journey does exist? No trayecto
-   if @driver.find_elements(:xpath, ".//*[@id='details']/p/a").size()>0
+   @driver.find_element(:name, "horario").click 
+
+ end
+
+#Iterate through all the combination of Cities
+
+for i in (0).upto(all_cities.length-2)
+  for j in (0).upto(all_cities.length-2)
+
+    o = all_cities[i]
+    d = all_cities[j]
+
+    puts "Departure is: " + o
+    puts "Arrival is: " + d
+
+    puts "Vamos a refrescar pagina con I: #{i} J: #{j}"
+    queryJourney(o, d)
+    puts "Refrescada con I: #{i} J: #{j}"
+
+  #Journey exist? Case: No journey between cities
+  if @driver.find_elements(:xpath, ".//*[@id='details']/p/a").size()>0
     puts @driver.find_elements(:xpath, ".//*[@id='details']/p/a").size()
     puts "No trayecto I: #{i} J: #{j}"  
     next
   end
 
-  #Journey does exist? Vacía
-  if @driver.find_elements(:xpath, ".//*[@id='resultados']/ul").size()==0
-    puts @driver.find_elements(:xpath, ".//*[@id='resultados']/ul").size()
-    puts "Web vacia info: #{i} J: #{j}"  
-    @driver.navigate.back
-  end
+  #Journey exist? Case: Empty page, requery - fallback to recoursively reload search page
+  noOnoD = @driver.find_elements(:xpath, ".//*[@id='resultados']/ul").size()==0 and @driver.find_elements(:xpath, ".//*[@id='details']/p").first.text=="No ha introducido ciudad de origen o destino"
+  if noOnoD
 
-    #Check if this is a page with results before retrieving results
+    puts @driver.find_elements(:xpath, ".//*[@id='details']/p").first.text
+    puts "Web vacia info: #{i} J: #{j}"  
+    
+    #Query the journey until it does not get a non-valid page
+    until !noOnoD
+     queryJourney(o, d)
+    end
+
+   #back in a page with either results or non-journey combination
+   puts "Am I back?" 
+
+    #Journey does exist? No journey, continue iterating to next city
+    if @driver.find_elements(:xpath, ".//*[@id='details']/p/a").size()>0
+     puts @driver.find_elements(:xpath, ".//*[@id='details']/p/a").size()
+     puts "No trayecto for prefailing combination I: #{i} J: #{j}"  
+     next
+   end
+
+ end
+
+    # waiter for the result
+    wait = Selenium::WebDriver::Wait.new(:timeout => 30)
+
+    #Check if this current page contains results before retrieving any them
     @allTrains = wait.until {
       els = @driver.find_elements(:xpath, ".//*[@id='resultados']/ul[*]/li[1]/a")
       if els.any?
