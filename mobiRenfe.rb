@@ -9,7 +9,7 @@ require 'moped'
 session = Moped::Session.new([ "127.0.0.1:27017" ])
 session.use "renfe_vizz"
 #Writes to journeys collection in the MongoDB
-journeys = session[:journeys]
+journeys = session[:connections]
 
 @driver = Selenium::WebDriver.for :firefox
 @base_url = "http://renfe.mobi"
@@ -57,7 +57,7 @@ def queryJourney(o, d)
 
    @driver.find_element(:name, "o").send_keys o
    @driver.find_element(:name, "d").send_keys d
-   @driver.find_element(:name, "DF").send_keys "8"
+   @driver.find_element(:name, "DF").send_keys "10"
    @driver.find_element(:name, "MF").send_keys "Julio"
    @driver.find_element(:name, "AF").send_keys "2013"
  

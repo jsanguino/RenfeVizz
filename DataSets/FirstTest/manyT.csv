@@ -1,0 +1,665 @@
+oCity,dCity,ntrains
+"Alicante / Alacant","Toledo",2
+"Alicante / Alacant","Vigo Guixar",1
+"Alicante / Alacant","Vitoria/Gasteiz",1
+"Albacete","A Coruña",1
+"Albacete","Almería",1
+"A Coruña","Alicante / Alacant",2
+"A Coruña","Albacete",2
+"A Coruña","Avila",1
+"A Coruña","Barcelona (*)",3
+"A Coruña","Burgos Rosa de Lima",4
+"A Coruña","Cuenca (*)",2
+"A Coruña","Ferrol",4
+"A Coruña","Figueres Vilafant",1
+"A Coruña","Girona",1
+"A Coruña","Hendaya",1
+"A Coruña","Irún",1
+"A Coruña","León",4
+"A Coruña","Lleida",3
+"A Coruña","Logroño",1
+"A Coruña","Lugo",5
+"A Coruña","Madrid (*)",6
+"A Coruña","Medina del Campo",4
+"A Coruña","Miranda de Ebro",3
+"A Coruña","Monforte de Lemos",7
+"A Coruña","Ourense",11
+"A Coruña","Palencia",4
+"A Coruña","Pamplona/Iruña",2
+"A Coruña","Ponferrada",4
+"A Coruña","Pontevedra",16
+"A Coruña","Sahagún",3
+"A Coruña","Salamanca (*)",1
+"A Coruña","San Sebastián/Donostia",1
+"A Coruña","Santiago de Compostela",24
+"A Coruña","Segovia (*)",3
+"A Coruña","Tarragona (*)",3
+"A Coruña","Tudela de Navarra",3
+"A Coruña","Vigo Guixar",16
+"A Coruña","Villena AV",2
+"A Coruña","Vitoria/Gasteiz",3
+"A Coruña","Zamora",4
+"A Coruña","Zaragoza (*)",3
+"Alicante / Alacant","A Coruña",1
+"Alicante / Alacant","Albacete",11
+"Alicante / Alacant","Alcázar de San Juan",2
+"Alicante / Alacant","Barcelona (*)",8
+"Alicante / Alacant","Benicassim",4
+"Alicante / Alacant","Burgos Rosa de Lima",1
+"Alicante / Alacant","Cartagena",3
+"Alicante / Alacant","Castellón /Castelló",8
+"Alicante / Alacant","Ciudad Real",2
+"Alicante / Alacant","Cuenca (*)",7
+"Alicante / Alacant","Elda-Petrer",8
+"Alicante / Alacant","Ferrol",1
+"Alicante / Alacant","Figueres",1
+"Alicante / Alacant","Figueres Vilafant",4
+"Alicante / Alacant","Gijón",2
+"Alicante / Alacant","Girona",5
+"Alicante / Alacant","León",2
+"Alicante / Alacant","Lorca-Sutullena",1
+"Alicante / Alacant","Madrid (*)",12
+"Alicante / Alacant","Medina del Campo",1
+"Alicante / Alacant","Miranda de Ebro",1
+"Alicante / Alacant","Montpellier",1
+"Alicante / Alacant","Murcia",4
+"Alicante / Alacant","Oropesa/Orpesa",2
+"Alicante / Alacant","Ourense",1
+"Alicante / Alacant","Oviedo",2
+"Alicante / Alacant","Palencia",3
+"Alicante / Alacant","Pontevedra",1
+"Alicante / Alacant","Portbou",1
+"Alicante / Alacant","Sahagún",2
+"Alicante / Alacant","Santander",1
+"Alicante / Alacant","Santiago de Compostela",1
+"Alicante / Alacant","Teruel",1
+"Alicante / Alacant","Zaragoza (*)",1
+"Albacete","Antequera (*)",1
+"Albacete","Avila",1
+"Albacete","Badajoz",1
+"Albacete","Barcelona (*)",4
+"Albacete","Benicassim",2
+"Albacete","Burgos Rosa de Lima",1
+"Albacete","Córdoba",1
+"Alicante / Alacant","Segovia (*)",4
+"Alicante / Alacant","Tarragona (*)",8
+"Alicante / Alacant","Valencia (*)",11
+"Alicante / Alacant","Valladolid Campo Grande",3
+"Alicante / Alacant","Villena",8
+"Alicante / Alacant","Villena AV",7
+"Alicante / Alacant","XÃ tiva",6
+"Alicante / Alacant","Zamora",1
+"Albacete","Alicante / Alacant",12
+"Albacete","Alcázar de San Juan",12
+"Albacete","Cartagena",4
+"Albacete","Castellón /Castelló",4
+"Albacete","Ciudad Real",3
+"Albacete","Cuenca (*)",6
+"Albacete","Elda-Petrer",2
+"Albacete","Ferrol",1
+"Albacete","Figueres Vilafant",2
+"Albacete","Gijón",1
+"Albacete","Girona",2
+"Albacete","Granada",1
+"Albacete","Huelva",1
+"Albacete","León",1
+"Albacete","Linares-Baeza",2
+"Albacete","Madrid (*)",19
+"Albacete","Málaga MarÃ­a Zambrano",1
+"Albacete","Medina del Campo",1
+"Albacete","Mérida",1
+"Albacete","Miranda de Ebro",1
+"Albacete","Murcia",5
+"Albacete","Oropesa/Orpesa",2
+"Albacete","Ourense",1
+"Albacete","Oviedo",1
+"Albacete","Palencia",2
+"Albacete","Pontevedra",1
+"Albacete","Puente Genil (*)",1
+"Albacete","Puertollano",1
+"Albacete","Sahagún",1
+"Albacete","Salamanca (*)",1
+"Albacete","Santander",1
+"Albacete","Santiago de Compostela",1
+"Albacete","Segovia (*)",4
+"Albacete","Sevilla",1
+"Albacete","Tarragona (*)",4
+"Albacete","Toledo",2
+"Albacete","Valdepeñas",1
+"Albacete","Valencia (*)",5
+"Albacete","Valladolid Campo Grande",3
+"Albacete","Vigo Guixar",1
+"Albacete","Villena",2
+"Albacete","Villena AV",8
+"Albacete","Vitoria/Gasteiz",1
+"Albacete","XÃ tiva",4
+"Albacete","Zamora",1
+"Alcázar de San Juan","Alicante / Alacant",2
+"Alcázar de San Juan","Albacete",11
+"Alcázar de San Juan","Almería",3
+"Alcázar de San Juan","Antequera (*)",1
+"Alcázar de San Juan","Badajoz",1
+"Alcázar de San Juan","Barcelona (*)",4
+"Alcázar de San Juan","Benicassim",1
+"Alcázar de San Juan","Cartagena",2
+"Alcázar de San Juan","Castellón /Castelló",3
+"Alcázar de San Juan","Ciudad Real",5
+"Alcázar de San Juan","Córdoba",1
+"Alcázar de San Juan","Elda-Petrer",2
+"Alcázar de San Juan","Figueres Vilafant",3
+"Alcázar de San Juan","Girona",3
+"Alcázar de San Juan","Granada",1
+"Alcázar de San Juan","Guadalajara (*)",1
+"Alcázar de San Juan","Huelva",1
+"Alcázar de San Juan","Jaén",4
+"Alcázar de San Juan","Linares-Baeza",8
+"Alcázar de San Juan","Madrid (*)",14
+"Alcázar de San Juan","Málaga MarÃ­a Zambrano",1
+"Alcázar de San Juan","Mérida",1
+"Alcázar de San Juan","Murcia",3
+"Alcázar de San Juan","Oropesa/Orpesa",1
+"Alcázar de San Juan","Puente Genil (*)",1
+"Alcázar de San Juan","Puertollano",1
+"Alcázar de San Juan","Segovia (*)",1
+"Alcázar de San Juan","Sevilla",1
+"Alcázar de San Juan","Tarragona (*)",4
+"Alcázar de San Juan","Valdepeñas",6
+"Alcázar de San Juan","Valencia (*)",4
+"Alcázar de San Juan","Valladolid Campo Grande",1
+"Alcázar de San Juan","Villena",2
+"Alcázar de San Juan","XÃ tiva",3
+"Alcázar de San Juan","Zaragoza (*)",1
+"Algeciras","Antequera (*)",4
+"Algeciras","Barcelona (*)",2
+"Algeciras","Bobadilla",3
+"Algeciras","Ciudad Real",4
+"Algeciras","Córdoba",5
+"Algeciras","Granada",3
+"Algeciras","Lleida",2
+"Algeciras","Madrid (*)",3
+"Algeciras","Puente Genil (*)",2
+"Algeciras","Puertollano",3
+"Algeciras","Tarragona (*)",2
+"Algeciras","Zaragoza (*)",2
+"Almería","Albacete",1
+"Almería","Alcázar de San Juan",3
+"Almería","Antequera (*)",4
+"Almería","Barcelona (*)",1
+"Almería","Castellón /Castelló",1
+"Almería","Granada",4
+"Almería","Linares-Baeza",3
+"Almería","Madrid (*)",2
+"Almería","Sevilla",4
+"Almería","Tarragona (*)",1
+"Almería","Valdepeñas",2
+"Almería","Valencia (*)",1
+"Almería","XÃ tiva",1
+"Antequera (*)","Albacete",1
+"Antequera (*)","Alcázar de San Juan",1
+"Antequera (*)","Algeciras",5
+"Antequera (*)","Almería",4
+"Antequera (*)","Antequera (*)",14
+"Antequera (*)","Barcelona (*)",6
+"Antequera (*)","Bobadilla",3
+"Antequera (*)","Castellón /Castelló",1
+"Antequera (*)","Ciudad Real",10
+"Antequera (*)","Córdoba",20
+"Antequera (*)","Cuenca (*)",2
+"Antequera (*)","Figueres Vilafant",1
+"Antequera (*)","Girona",1
+"Antequera (*)","Granada",9
+"Antequera (*)","Guadalajara (*)",1
+"Antequera (*)","Huelva",2
+"Antequera (*)","Jaén",1
+"Antequera (*)","Linares-Baeza",1
+"Antequera (*)","Lleida",5
+"Antequera (*)","Madrid (*)",10
+"Antequera (*)","Málaga MarÃ­a Zambrano",11
+"Antequera (*)","Pamplona/Iruña",1
+"Antequera (*)","Puente Genil (*)",14
+"Antequera (*)","Puertollano",8
+"Antequera (*)","Requena / Utiel",1
+"Antequera (*)","Segovia (*)",2
+"Antequera (*)","Sevilla",10
+"Antequera (*)","Tarragona (*)",6
+"Antequera (*)","Toledo",1
+"Antequera (*)","Tudela de Navarra",1
+"Antequera (*)","Valdepeñas",1
+"Antequera (*)","Valencia (*)",3
+"Antequera (*)","Valladolid Campo Grande",2
+"Antequera (*)","XÃ tiva",1
+"Antequera (*)","Zaragoza (*)",5
+"Avila","A Coruña",1
+"Avila","Albacete",1
+"Avila","Alcázar de San Juan",1
+"Avila","Burgos Rosa de Lima",4
+"Avila","Cartagena",1
+"Avila","Entroncamento",1
+"Avila","Ferrol",1
+"Avila","Gijón",1
+"Avila","Hendaya",1
+"Avila","Irún",3
+"Avila","León",4
+"Avila","Lisboa (*)",1
+"Avila","Lugo",1
+"Avila","Madrid (*)",21
+"Avila","Medina del Campo",12
+"Avila","Miranda de Ebro",4
+"Avila","Monforte de Lemos",1
+"Avila","Murcia",1
+"Avila","Ourense",1
+"Avila","Oviedo",1
+"Avila","Palencia",10
+"Avila","Ponferrada",1
+"Avila","Pontevedra",1
+"Avila","Sahagún",3
+"Avila","Salamanca (*)",9
+"Avila","San Sebastián/Donostia",3
+"Avila","Santander",2
+"Avila","Santiago de Compostela",1
+"Avila","Valladolid Campo Grande",10
+"Avila","Vigo Guixar",1
+"Avila","Vitoria/Gasteiz",4
+"Avila","Zamora",1
+"Badajoz","Albacete",1
+"Badajoz","Alcázar de San Juan",1
+"Badajoz","Barcelona (*)",3
+"Badajoz","Cáceres",4
+"Badajoz","Calatayud",1
+"Badajoz","Castellón /Castelló",1
+"Badajoz","Ciudad Real",2
+"Badajoz","Figueres Vilafant",1
+"Badajoz","Girona",1
+"Badajoz","Guadalajara (*)",2
+"Badajoz","Lleida",1
+"Badajoz","Madrid (*)",4
+"Badajoz","Mérida",6
+"Badajoz","Navalmoral de la Mata",3
+"Badajoz","Puertollano",1
+"Badajoz","Tarragona (*)",3
+"Badajoz","Valencia (*)",1
+"Badajoz","XÃ tiva",1
+"Badajoz","Zaragoza (*)",2
+"Barcelona (*)","A Coruña",3
+"Barcelona (*)","Alicante / Alacant",8
+"Barcelona (*)","Albacete",3
+"Barcelona (*)","Alcázar de San Juan",4
+"Barcelona (*)","Algeciras",1
+"Barcelona (*)","Almería",1
+"Barcelona (*)","Antequera (*)",6
+"Barcelona (*)","Badajoz",2
+"Barcelona (*)","Barcelona (*)",1
+"Barcelona (*)","Benicassim",10
+"Barcelona (*)","Bilbao-Abando",2
+"Barcelona (*)","Bobadilla",1
+"Barcelona (*)","Burgos Rosa de Lima",4
+"Barcelona (*)","Cáceres",2
+"Barcelona (*)","Cádiz",2
+"Barcelona (*)","Calatayud",7
+"Barcelona (*)","Cartagena",2
+"Barcelona (*)","Castellón /Castelló",19
+"Barcelona (*)","Ciudad Real",6
+"Barcelona (*)","Córdoba",12
+"Barcelona (*)","Cuenca (*)",2
+"Barcelona (*)","Elda-Petrer",4
+"Barcelona (*)","Ferrol",1
+"Barcelona (*)","Figueres",23
+"Barcelona (*)","Figueres Vilafant",21
+"Barcelona (*)","Gijón",2
+"Barcelona (*)","Girona",45
+"Barcelona (*)","Granada",2
+"Barcelona (*)","Guadalajara (*)",8
+"Barcelona (*)","Huelva",1
+"Barcelona (*)","Huesca",1
+"Barcelona (*)","Irún",2
+"Barcelona (*)","Jaén",1
+"Barcelona (*)","Jerez de la Frontera",2
+"Barcelona (*)","León",3
+"Barcelona (*)","Linares-Baeza",3
+"Barcelona (*)","Lleida",38
+"Barcelona (*)","Logroño",4
+"Barcelona (*)","Lorca-Sutullena",1
+"Barcelona (*)","Lugo",2
+"Barcelona (*)","Madrid (*)",31
+"Barcelona (*)","Málaga MarÃ­a Zambrano",7
+"Barcelona (*)","Medina del Campo",1
+"Barcelona (*)","Mérida",3
+"Barcelona (*)","Miranda de Ebro",5
+"Barcelona (*)","Monforte de Lemos",2
+"Barcelona (*)","Montpellier",1
+"Barcelona (*)","Murcia",3
+"Barcelona (*)","Navalmoral de la Mata",2
+"Barcelona (*)","Orleans-Les Aubrais",1
+"Barcelona (*)","Oropesa/Orpesa",7
+"Barcelona (*)","Ourense",2
+"Barcelona (*)","Oviedo",2
+"Barcelona (*)","Palencia",3
+"Barcelona (*)","Pamplona/Iruña",5
+"Barcelona (*)","París Austerlitz",1
+"Barcelona (*)","Ponferrada",2
+"Barcelona (*)","Portbou",12
+"Barcelona (*)","Puente Genil (*)",4
+"Barcelona (*)","Puerto Santa María",2
+"Barcelona (*)","Puertollano",4
+"Barcelona (*)","Reus",16
+"Barcelona (*)","Requena / Utiel",1
+"Barcelona (*)","Sahagún",2
+"Barcelona (*)","Salamanca (*)",1
+"Barcelona (*)","San Fernando (*)",2
+"Barcelona (*)","San Sebastián/Donostia",2
+"Barcelona (*)","Santiago de Compostela",2
+"Barcelona (*)","Segovia (*)",1
+"Barcelona (*)","Sevilla",7
+"Barcelona (*)","Tarragona (*)",76
+"Barcelona (*)","Tudela de Navarra",9
+"Barcelona (*)","Valdepeñas",2
+"Barcelona (*)","Valencia (*)",19
+"Barcelona (*)","Valladolid Campo Grande",2
+"Barcelona (*)","Vigo Guixar",2
+"Barcelona (*)","Villena",4
+"Barcelona (*)","Vitoria/Gasteiz",2
+"Barcelona (*)","XÃ tiva",6
+"Barcelona (*)","Zaragoza (*)",35
+"Benicassim","Alicante / Alacant",4
+"Benicassim","Barcelona (*)",9
+"Benicassim","Cartagena",2
+"Benicassim","Castellón /Castelló",13
+"Benicassim","Cuenca (*)",3
+"Benicassim","Elda-Petrer",4
+"Benicassim","Figueres",1
+"Benicassim","Figueres Vilafant",4
+"Benicassim","Gijón",1
+"Benicassim","Girona",5
+"Benicassim","León",1
+"Benicassim","Lorca-Sutullena",1
+"Benicassim","Madrid (*)",4
+"Benicassim","Montpellier",1
+"Benicassim","Murcia",3
+"Benicassim","Oropesa/Orpesa",10
+"Benicassim","Oviedo",1
+"Benicassim","Palencia",1
+"Benicassim","Portbou",1
+"Benicassim","Requena / Utiel",1
+"Benicassim","Tarragona (*)",9
+"Benicassim","Valencia (*)",13
+"Benicassim","Valladolid Campo Grande",1
+"Benicassim","Villena",4
+"Benicassim","XÃ tiva",4
+"Bilbao-Abando","Alicante / Alacant",1
+"Bilbao-Abando","Barcelona (*)",2
+"Bilbao-Abando","Burgos Rosa de Lima",3
+"Bilbao-Abando","Cartagena",1
+"Bilbao-Abando","Elda-Petrer",1
+"Bilbao-Abando","Ferrol",1
+"Bilbao-Abando","Guadalajara (*)",2
+"Bilbao-Abando","León",1
+"Bilbao-Abando","Lleida",2
+"Bilbao-Abando","Logroño",2
+"Bilbao-Abando","Lugo",1
+"Bilbao-Abando","Madrid (*)",4
+"Bilbao-Abando","Medina del Campo",3
+"Bilbao-Abando","Miranda de Ebro",6
+"Bilbao-Abando","Monforte de Lemos",1
+"Bilbao-Abando","Murcia",1
+"Bilbao-Abando","Ourense",1
+"Bilbao-Abando","Palencia",1
+"Bilbao-Abando","Ponferrada",1
+"Bilbao-Abando","Sahagún",1
+"Bilbao-Abando","Salamanca (*)",3
+"Bilbao-Abando","Segovia (*)",2
+"Bilbao-Abando","Sevilla",1
+"Bilbao-Abando","Tarragona (*)",2
+"Bilbao-Abando","Teruel",1
+"Bilbao-Abando","Tudela de Navarra",2
+"Bilbao-Abando","Valencia (*)",1
+"Bilbao-Abando","Valladolid Campo Grande",3
+"Bilbao-Abando","Vigo Guixar",1
+"Bilbao-Abando","Villena",1
+"Bilbao-Abando","XÃ tiva",1
+"Bilbao-Abando","Zaragoza (*)",2
+"Blois","Burgos Rosa de Lima",1
+"Blois","Madrid (*)",1
+"Blois","Valladolid Campo Grande",1
+"Blois","Vitoria/Gasteiz",1
+"Bobadilla","Algeciras",3
+"Bobadilla","Antequera (*)",3
+"Bobadilla","Barcelona (*)",2
+"Bobadilla","Ciudad Real",3
+"Bobadilla","Córdoba",3
+"Bobadilla","Granada",3
+"Bobadilla","Lleida",2
+"Bobadilla","Madrid (*)",1
+"Bobadilla","Málaga MarÃ­a Zambrano",6
+"Bobadilla","Puente Genil (*)",2
+"Bobadilla","Puertollano",2
+"Bobadilla","Sevilla",5
+"Bobadilla","Tarragona (*)",2
+"Bobadilla","Zaragoza (*)",2
+"Burgos Rosa de Lima","A Coruña",4
+"Burgos Rosa de Lima","Avila",3
+"Burgos Rosa de Lima","Barcelona (*)",4
+"Burgos Rosa de Lima","Bilbao-Abando",3
+"Burgos Rosa de Lima","Blois",1
+"Burgos Rosa de Lima","Entroncamento",1
+"Burgos Rosa de Lima","Ferrol",2
+"Burgos Rosa de Lima","Figueres Vilafant",1
+"Burgos Rosa de Lima","Gijón",2
+"Burgos Rosa de Lima","Girona",1
+"Burgos Rosa de Lima","Hendaya",4
+"Burgos Rosa de Lima","Irún",6
+"Burgos Rosa de Lima","León",4
+"Burgos Rosa de Lima","Lisboa (*)",1
+"Burgos Rosa de Lima","Lleida",4
+"Burgos Rosa de Lima","Logroño",3
+"Burgos Rosa de Lima","Lugo",3
+"Burgos Rosa de Lima","Madrid (*)",8
+"Burgos Rosa de Lima","Medina del Campo",10
+"Burgos Rosa de Lima","Miranda de Ebro",14
+"Burgos Rosa de Lima","Monforte de Lemos",3
+"Burgos Rosa de Lima","Orleans-Les Aubrais",1
+"Burgos Rosa de Lima","Ourense",3
+"Burgos Rosa de Lima","Oviedo",2
+"Burgos Rosa de Lima","Palencia",7
+"Burgos Rosa de Lima","Pamplona/Iruña",3
+"Burgos Rosa de Lima","París Austerlitz",1
+"Burgos Rosa de Lima","Ponferrada",3
+"Burgos Rosa de Lima","Sahagún",3
+"Burgos Rosa de Lima","Salamanca (*)",7
+"Burgos Rosa de Lima","San Sebastián/Donostia",6
+"Burgos Rosa de Lima","Santander",1
+"Burgos Rosa de Lima","Santiago de Compostela",2
+"Burgos Rosa de Lima","Segovia (*)",3
+"Burgos Rosa de Lima","Sevilla",1
+"Burgos Rosa de Lima","Tarragona (*)",4
+"Burgos Rosa de Lima","Tudela de Navarra",6
+"Burgos Rosa de Lima","Valladolid Campo Grande",11
+"Burgos Rosa de Lima","Vigo Guixar",3
+"Burgos Rosa de Lima","Zaragoza (*)",6
+"Cáceres","Badajoz",2
+"Cáceres","Barcelona (*)",2
+"Cáceres","Calatayud",1
+"Cáceres","Figueres Vilafant",1
+"Cáceres","Girona",1
+"Cáceres","Guadalajara (*)",2
+"Calatayud","Valladolid Campo Grande",1
+"Castellón /Castelló","Valladolid Campo Grande",1
+"Burgos Rosa de Lima","Vitoria/Gasteiz",11
+"Cáceres","Lleida",1
+"Cáceres","Madrid (*)",5
+"Cáceres","Mérida",5
+"Cáceres","Navalmoral de la Mata",5
+"Cáceres","Sevilla",1
+"Cáceres","Tarragona (*)",2
+"Cáceres","Zaragoza (*)",2
+"Cádiz","Badajoz",1
+"Cádiz","Barcelona (*)",2
+"Cádiz","Bobadilla",1
+"Cádiz","Ciudad Real",4
+"Cádiz","Córdoba",18
+"Cádiz","Cuenca (*)",1
+"Cádiz","Figueres Vilafant",1
+"Cádiz","Gijón",1
+"Cádiz","Girona",1
+"Cádiz","Guadalajara (*)",1
+"Cádiz","Jaén",3
+"Cádiz","Jerez de la Frontera",16
+"Cádiz","León",1
+"Cádiz","Lleida",1
+"Cádiz","Madrid (*)",13
+"Cádiz","Málaga MarÃ­a Zambrano",1
+"Cádiz","Mérida",1
+"Cádiz","Oviedo",1
+"Cádiz","Palencia",2
+"Cádiz","Puerto Santa María",16
+"Cádiz","Puertollano",3
+"Cádiz","Sahagún",1
+"Cádiz","San Fernando (*)",16
+"Cádiz","Santander",1
+"Cádiz","Segovia (*)",1
+"Cádiz","Sevilla",15
+"Cádiz","Tarragona (*)",2
+"Cádiz","Valencia (*)",1
+"Cádiz","Valladolid Campo Grande",3
+"Cádiz","Zaragoza (*)",2
+"Calatayud","San Sebastián/Donostia",2
+"Calatayud","Segovia (*)",1
+"Calatayud","Sevilla",1
+"Calatayud","Tarragona (*)",7
+"Calatayud","Tudela de Navarra",6
+"Calatayud","Valdepeñas",1
+"Calatayud","Zaragoza (*)",13
+"Cartagena","Segovia (*)",1
+"Cartagena","Tarragona (*)",3
+"Cartagena","Valencia (*)",4
+"Cartagena","Valladolid Campo Grande",1
+"Cartagena","Villena",4
+"Cartagena","XÃ tiva",4
+"Castellón /Castelló","Sevilla",1
+"Castellón /Castelló","Tarragona (*)",18
+"Castellón /Castelló","Valdepeñas",1
+"Castellón /Castelló","Valencia (*)",21
+"Castellón /Castelló","Villena",4
+"Castellón /Castelló","XÃ tiva",6
+"Ciudad Real","San Sebastián/Donostia",1
+"Ciudad Real","Santander",1
+"Ciudad Real","Segovia (*)",1
+"Ciudad Real","Sevilla",12
+"Ciudad Real","Tarragona (*)",7
+"Ciudad Real","Tudela de Navarra",1
+"Ciudad Real","Valencia (*)",3
+"Ciudad Real","Valladolid Campo Grande",3
+"Ciudad Real","Villena",2
+"Ciudad Real","Vitoria/Gasteiz",1
+"Ciudad Real","XÃ tiva",2
+"Ciudad Real","Zaragoza (*)",6
+"Córdoba","San Sebastián/Donostia",2
+"Córdoba","Santander",1
+"Córdoba","Segovia (*)",5
+"Córdoba","Sevilla",37
+"Córdoba","Tarragona (*)",9
+"Córdoba","Toledo",1
+"Córdoba","Tudela de Navarra",1
+"Córdoba","Valdepeñas",1
+"Córdoba","Valencia (*)",4
+"Córdoba","Valladolid Campo Grande",7
+"Córdoba","Vitoria/Gasteiz",2
+"Córdoba","XÃ tiva",1
+"Córdoba","Zaragoza (*)",8
+"Cuenca (*)","Santiago de Compostela",1
+"Cuenca (*)","Segovia (*)",2
+"Cuenca (*)","Sevilla",1
+"Cuenca (*)","Tarragona (*)",2
+"Cuenca (*)","Toledo",1
+"Cuenca (*)","Valencia (*)",11
+"Cuenca (*)","Valladolid Campo Grande",1
+"Cuenca (*)","Vigo Guixar",1
+"Cuenca (*)","Villena",2
+"Cuenca (*)","Villena AV",7
+"Cuenca (*)","Zamora",1
+"Elda-Petrer","Segovia (*)",1
+"Elda-Petrer","Tarragona (*)",4
+"Elda-Petrer","Valencia (*)",6
+"Elda-Petrer","Valladolid Campo Grande",1
+"Elda-Petrer","Villena",8
+"Elda-Petrer","XÃ tiva",6
+"Entroncamento","San Sebastián/Donostia",1
+"Entroncamento","Valladolid Campo Grande",1
+"Entroncamento","Vitoria/Gasteiz",1
+"Ferrol","Santiago de Compostela",2
+"Ferrol","Segovia (*)",3
+"Ferrol","Sevilla",1
+"Ferrol","Tarragona (*)",1
+"Ferrol","Tudela de Navarra",1
+"Ferrol","Valencia (*)",1
+"Ferrol","Valladolid Campo Grande",1
+"Ferrol","Villena AV",2
+"Ferrol","Zamora",3
+"Ferrol","Zaragoza (*)",1
+"Figueres","Tarragona (*)",1
+"Figueres","Valencia (*)",1
+"Figueres","Villena",1
+"Figueres","XÃ tiva",1
+"Figueres Vilafant","Santiago de Compostela",1
+"Figueres Vilafant","Sevilla",4
+"Figueres Vilafant","Tarragona (*)",18
+"Figueres Vilafant","Tudela de Navarra",1
+"Figueres Vilafant","Valdepeñas",2
+"Figueres Vilafant","Valencia (*)",7
+"Figueres Vilafant","Villena",2
+"Figueres Vilafant","Vitoria/Gasteiz",1
+"Figueres Vilafant","XÃ tiva",3
+"Figueres Vilafant","Zaragoza (*)",13
+"Gandía","Valencia (*)",2
+"Gijón","Segovia (*)",2
+"Gijón","Sevilla",1
+"Gijón","Tarragona (*)",1
+"Gijón","Tudela de Navarra",1
+"Gijón","Valencia (*)",1
+"Gijón","Valladolid Campo Grande",4
+"Gijón","Vigo Guixar",1
+"Gijón","Villena",1
+"Gijón","Villena AV",1
+"Gijón","Vitoria/Gasteiz",1
+"Gijón","Zaragoza (*)",1
+"Girona","Santiago de Compostela",1
+"Girona","Sevilla",4
+"Girona","Tarragona (*)",19
+"Girona","Tudela de Navarra",1
+"Girona","Valdepeñas",2
+"Girona","Valencia (*)",8
+"Girona","Villena",3
+"Girona","Vitoria/Gasteiz",1
+"Girona","XÃ tiva",4
+"Girona","Zaragoza (*)",13
+"Granada","Segovia (*)",1
+"Granada","Sevilla",4
+"Granada","Tarragona (*)",3
+"Granada","Toledo",1
+"Granada","Valencia (*)",1
+"Granada","Valladolid Campo Grande",1
+"Granada","Zaragoza (*)",2
+"Guadalajara (*)","Segovia (*)",1
+"Guadalajara (*)","Soria",2
+"Guadalajara (*)","Tarragona (*)",6
+"Guadalajara (*)","Teruel",1
+"Guadalajara (*)","Tudela de Navarra",2
+"Guadalajara (*)","Valencia (*)",1
+"Guadalajara (*)","Valladolid Campo Grande",1
+"Guadalajara (*)","Villena",1
+"Guadalajara (*)","XÃ tiva",1
+"Guadalajara (*)","Zaragoza (*)",7
+"Huelva","Sevilla",3
+"Huelva","Tarragona (*)",2
+"Huelva","Valdepeñas",1
+"Huelva","Valencia (*)",2
+"Huelva","XÃ tiva",1
+"Huelva","Zaragoza (*)",1
+"Huesca","Tarragona (*)",1
+"Huesca","Zaragoza (*)",5
+"Irún","San Sebastián/Donostia",10
+"Irún","Santiago de Compostela",1
+"Irún","Segovia (*)",2
+"Irún","Sevilla",1
+"Irún","Tarragona (*)",2
+"Irún","Teruel",1
+"Irún","Tudela de Navarra",2
