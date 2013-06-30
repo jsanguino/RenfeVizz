@@ -79,7 +79,9 @@ end
 
 # Returns true for error pages
 def errorPage?
-  @driver.find_elements(:xpath, ".//*[@id='resultados']/ul").size()==0 and @driver.find_elements(:xpath, ".//*[@id='details']/p").first.text=="No ha introducido ciudad de origen o destino"
+  @driver.find_elements(:xpath, ".//*[@id='resultados']/ul").size()==0 and 
+  @driver.find_elements(:xpath, ".//*[@id='details']/p").first.text=="No ha introducido ciudad de origen o destino" or
+  @driver.find_elements(:xpath, ".//*[@id='details']/p").first.text=="La fecha introducida no es correcta"
 end
 
 
