@@ -9,7 +9,7 @@ require 'moped'
 session = Moped::Session.new([ "127.0.0.1:27017" ])
 session.use "renfe_vizz"
 #Writes to journeys collection in the MongoDB
-journeys = session[:connections]
+journeys = session[:journeys]
 
 @driver = Selenium::WebDriver.for :firefox
 @base_url = "http://renfe.mobi"
@@ -55,7 +55,7 @@ def queryJourney(o, d)
 
    #Rerequest page until page is not down 
    while @driver.find_element(:xpath, "html/body/h1").text == "Estado HTTP 500 -" 
-       puts "Inside Loop!"
+       puts "Renfe is down!"
        @driver.get(@base_url + "/renfev2/busca_trenes.do")
    end
 
@@ -173,7 +173,7 @@ for i in (0).upto(all_cities.length-2)
    end
 
 #Add to DB general data of this Journey
-journeys.insert( oCity: o, dCity: d, ntrains: @allTrains.length);
+journeys.find(oCity: o, dCity: d).upsert( oCity: o, dCity: d, ntrains: @allTrains.length);
 
 #Add to DB every Train for this Journey
 for k in (@allTrains.length).downto(1)
