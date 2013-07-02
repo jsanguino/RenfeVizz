@@ -50,10 +50,18 @@ end
 # Returns a webpage with a query for a journey between two cities
 def queryJourney(o, d)
 
+  #@driver.get(@base_url + "/renfev2/detalle_precio.do?ss=E&des=&num=&mes=&dia=&anyo=&ori=")
   @driver.get(@base_url + "/renfev2/busca_trenes.do")
 
+   #Rerequest page until page is not down 
+   while @driver.find_element(:xpath, "html/body/h1").text == "Estado HTTP 500 -" 
+       puts "Inside Loop!"
+       @driver.get(@base_url + "/renfev2/busca_trenes.do")
+   end
+
   # waiter for the result
-  wait = Selenium::WebDriver::Wait.new(:timeout => 30)
+  #wait = Selenium::WebDriver::Wait.new(:timeout => 30)
+  #wait.until { @driver.find_element(:name, "d").displayed?}
 
    @driver.find_element(:name, "o").send_keys o
    @driver.find_element(:name, "d").send_keys d
@@ -61,8 +69,6 @@ def queryJourney(o, d)
    @driver.find_element(:name, "MF").send_keys "Julio"
    @driver.find_element(:name, "AF").send_keys "2013"
  
-   wait.until { @driver.find_element(:name, "d").displayed?}
-
    @driver.find_element(:name, "horario").click
 
  end
