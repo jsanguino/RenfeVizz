@@ -1,5 +1,6 @@
 require "selenium-webdriver"
 require 'moped'
+require "json"
 
 # ----------------------------------------------------------------
 # Webdriver Settings for Renfe Scrapper - by Victoriano Izquierdo
@@ -9,7 +10,7 @@ require 'moped'
 session = Moped::Session.new([ "127.0.0.1:27017" ])
 session.use "renfe_vizz"
 #Writes to journeys collection in the MongoDB
-journeys = session[:journeys]
+journeys = session[:new_collection]
 
 @driver = Selenium::WebDriver.for :firefox
 @base_url = "http://renfe.mobi"
@@ -95,8 +96,8 @@ end
 # Iterate through all the combination of Cities
 #-----------------------------------------------
 
-for i in (0).upto(all_cities.length-2)
-  for j in (0).upto(all_cities.length-2)
+for i in (96).upto(all_cities.length-2)
+  for j in (73).upto(all_cities.length-2)
 
     o = all_cities[i]
     d = all_cities[j]
@@ -173,13 +174,21 @@ for i in (0).upto(all_cities.length-2)
    end
 
 #Add to DB general data of this Journey
-journeys.find(oCity: o, dCity: d).upsert( oCity: o, dCity: d, ntrains: @allTrains.length);
+#db.connections.find({oCity: "A Coruña"}, {_id: 0, ntrains: 1})
+#prev_ntrains = journeys.find(oCity: o).select(ntrains: 1).first
+#parsed = JSON.parse(prev_ntrains) prev_ntrains["ntrains"].to_i 
+#puts prev_ntrains
 
+ttrains = @allTrains.length 
 #Add to DB every Train for this Journey
 for k in (@allTrains.length).downto(1)
-  journeys.find(oCity: o, dCity: d).update("$addToSet" => { "trains" => { "tname" => @trains[[k,0]], 
-    "departure" => @trains[[k,1]], "arrival" => @trains[[k,2]], "duration" => @trains[[k,3]]}});
+  puts "t#{i}#{j}#{k}_to"
+  journeys.find(oCity: o).upsert({"$addToSet" => { "trains" => {"oCity" => o, "t#{i}#{j}-#{k}_to" => d, "t#{i}#{j}-#{k}_ref" => @trains[[k,0]], 
+    "t#{i}#{j}-#{k}_dep" => @trains[[k,1]], "t#{i}#{j}-#{k}_arriv" => @trains[[k,2]], "t#{i}#{j}-#{k}_time" => @trains[[k,3]]}}})
+  
 end
+
+journeys.find(oCity: o).update({ "$inc" =>{ "trains_out" => @allTrains.length}})
 
 puts "Total trains #{@allTrains.length}"
 puts "Total journeys in DB #{journeys.find.count}"
