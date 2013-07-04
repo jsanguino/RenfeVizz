@@ -7,5 +7,7 @@ Icon
 .Spotlight-V100
 .Trashes
 
+.gitignore
+
 dumps/
 DataSets/
