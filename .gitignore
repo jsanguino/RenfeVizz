@@ -9,5 +9,5 @@ Icon
 
 .gitignore
 
-dumps/
-DataSets/
+# dumps/
+# DataSets/

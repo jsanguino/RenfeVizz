@@ -1,16 +1,18 @@
 require "selenium-webdriver"
-require 'moped'
-require "json"
+require 'mongo'
+include Mongo
+
 
 # ----------------------------------------------------------------
 # Webdriver Settings for Renfe Scrapper - by Victoriano Izquierdo
 #-----------------------------------------------------------------
 
 #Connect with MongoDB
-session = Moped::Session.new([ "127.0.0.1:27017" ])
-session.use "renfe_vizz"
-#Writes to journeys collection in the MongoDB
-journeys = session[:stations]
+
+mongo_client = MongoClient.new("localhost", 27017)
+db = mongo_client.db("renfe_vizz")
+coll = db.collection("stations")
+coll_trains = db.collection("trains")
 
 @driver = Selenium::WebDriver.for :firefox
 @base_url = "http://renfe.mobi"
@@ -56,23 +58,23 @@ def queryJourney(o, d)
 
    #Rerequest page until page is not down 
    while @driver.find_element(:xpath, "html/body/h1").text == "Estado HTTP 500 -" 
-       puts "Renfe is down!"
-       @driver.get(@base_url + "/renfev2/busca_trenes.do")
+     puts "Renfe is down!"
+     @driver.get(@base_url + "/renfev2/busca_trenes.do")
    end
 
   # waiter for the result
   #wait = Selenium::WebDriver::Wait.new(:timeout => 30)
   #wait.until { @driver.find_element(:name, "d").displayed?}
 
-   @driver.find_element(:name, "o").send_keys o
-   @driver.find_element(:name, "d").send_keys d
-   @driver.find_element(:name, "DF").send_keys "10"
-   @driver.find_element(:name, "MF").send_keys "Julio"
-   @driver.find_element(:name, "AF").send_keys "2013"
- 
-   @driver.find_element(:name, "horario").click
+  @driver.find_element(:name, "o").send_keys o
+  @driver.find_element(:name, "d").send_keys d
+  @driver.find_element(:name, "DF").send_keys "10"
+  @driver.find_element(:name, "MF").send_keys "Julio"
+  @driver.find_element(:name, "AF").send_keys "2013"
 
- end
+  @driver.find_element(:name, "horario").click
+
+end
 
 #Returns true for pages with no trains between a valid combinations of cities
 def noTrains?
@@ -173,30 +175,55 @@ for i in (96).upto(all_cities.length-2)
      @trains[[z,3]]= ttime
    end
 
-puts "QUE VIENE"
-puts @trains
-puts @trains.length
-puts @allTrains.length
-
 #Add to DB general data of this Journey
-#db.connections.find({oCity: "A Coruña"}, {_id: 0, ntrains: 1})
-#prev_ntrains = journeys.find(oCity: o).select(ntrains: 1).first
-#parsed = JSON.parse(prev_ntrains) prev_ntrains["ntrains"].to_i 
-#puts prev_ntrains
 
 ttrains = @allTrains.length 
 #Add to DB every Train for this Journey
 for k in (@allTrains.length).downto(1)
-  puts "t#{i}#{j}#{k}_to"
-  journeys.find(oCity: o).upsert({"$addToSet" => { "trains" => {"oCity" => o, "t_to" => d, "t_ref" => @trains[[k,0]], 
-    "t_dep" => @trains[[k,1]], "t#{i}#{j}-#{k}_arriv" => @trains[[k,2]], "t#{i}#{j}-#{k}_time" => @trains[[k,3]]}}})
+
+  #Check if previous record of this train is already stored
+  @existing_train = coll.find({ "oCity" => o, 'trains' =>{'$elemMatch' =>{'dep_time' => @trains[[k,1]]}}})
+  @isnew = @existing_train.to_a.empty?
+  puts @isnew
+  puts @existing_train.to_a
+ 
+  if @isnew
+    #Update station collection
+    coll.update( { "oCity" => o}, 
+    { 
+      "$set" => {"oCity" => o },
+      "$inc" =>{ "total_trains_out" => 1},
+      "$addToSet" => {"trains" => {"dep_time" => @trains[[k,1]]}}
+
+   }, :upsert => true )
+    
+  end
+
+  #Add stops to the train departing at that time
+  coll.update( { "oCity" => o, 'trains' =>{'$elemMatch' =>{'dep_time' => @trains[[k,1]]}}}, 
+  { 
+    "$addToSet" => { "trains.$.stops" => {"station_id" => d, "train_name"=> @trains[[k,0]], "total_time" => @trains[[k,3]], "arriv_time" => @trains[[k,2]] }}
+    }, :upsert => true )
   
+  #Update trains collection
+    coll_trains.update( { "train_name" => @trains[[k,0]]}, 
+    { 
+      "$set" => { "train_name" => @trains[[k,0]] },
+      "$inc" =>{ "total_stops" => 1},
+      "$addToSet" => {"stops" => {"arriv_time" => @trains[[k,2]], "station" => d }}
+
+   }, :upsert => true )
+  #Update trains collection including the origin in the route
+   coll_trains.update( { "train_name" => @trains[[k,0]]}, 
+    { 
+      "$inc" =>{ "total_stops" => 1},
+      "$addToSet" => {"stops" => {"arriv_time" => @trains[[k,1]], "station" => o }}
+   }, :upsert => true )
+
 end
 
-journeys.find(oCity: o).update({ "$inc" =>{ "trains_out" => @allTrains.length}})
-
-puts "Total trains #{@allTrains.length}"
-puts "Total journeys in DB #{journeys.find.count}"
+#Increment total_destinations
+coll.update( { "oCity" => o}, { "$inc" =>{ "total_destinations" => 1}}, :upsert => true )
 
 end 
 end  
