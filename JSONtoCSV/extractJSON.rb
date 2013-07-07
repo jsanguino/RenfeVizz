@@ -4,6 +4,11 @@ require "csv"
 require 'pp'
 include Mongo
 
+# ----------------------------------------------------------------
+# Converter to CVS of Renfe data scrapped and stored in MongoDB 
+# - by Victoriano Izquierdo
+#-----------------------------------------------------------------
+
 # ---- Connect with MongoDB
 mongo_client = MongoClient.new("localhost", 27017)
 db = mongo_client.db("renfe_vizz")
@@ -24,7 +29,7 @@ f_trains_csv = "trains.csv"
 # ---- Write Stations to CVS --------
 
 #puts coll_stations.find().to_a
-total_cityStations = 40 
+total_cityStations = 3 
 cityStations = coll_stations.find({}, {:limit => total_cityStations}).to_a
 
 csv_string = Hash.new
@@ -145,7 +150,7 @@ puts "Printing and writing to file..."
 printHashCSV_Header(csv_string, larger_trains, f_stations_csv)
 
 #Write DATA
-for o in (0).upto(total_cityStations) 
+for o in (0).upto(total_cityStations-1) 
 nstation = o
 printHashCSV_Data(csv_string, nstation, f_stations_csv)
 end
