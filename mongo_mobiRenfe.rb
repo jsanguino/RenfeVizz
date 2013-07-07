@@ -98,7 +98,7 @@ end
 # Iterate through all the combination of Cities
 #-----------------------------------------------
 
-for i in (0).upto(all_cities.length-2)
+for i in (43).upto(all_cities.length-2)
   for j in (0).upto(all_cities.length-2)
 
     o = all_cities[i]
