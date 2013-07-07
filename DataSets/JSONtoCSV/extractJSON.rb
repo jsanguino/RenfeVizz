@@ -12,20 +12,20 @@ coll_trains = db.collection("trains")
 
 # ---- Storing collections as JSON files
 my_stations = coll_stations.find().to_a.to_json
-my_trains = coll_trains.find().to_a.to_json
+#my_trains = coll_trains.find().to_a.to_json
 
 # ---- Files to be written as JSON or CSV--------
 
-my_stations_json = "stations.json"
-my_stations_csv = "stations.csv"
-my_trains_json = "trains.json"
-my_trains_csv = "trains.csv"
+f_stations_json = "stations.json"
+f_stations_csv = "stations.csv"
+f_trains_json = "trains.json"
+f_trains_csv = "trains.csv"
 
 # ---- Write Stations to CVS --------
 
 #puts coll_stations.find().to_a
-
-cityStations = coll_stations.find({}, {:limit => 2}).to_a
+total_cityStations = 40 
+cityStations = coll_stations.find({}, {:limit => total_cityStations}).to_a
 
 csv_string = Hash.new
 csv_string[[0,0]]= "oCity"
@@ -75,78 +75,77 @@ for i in (0).upto(cityStations.length-1)
 
    end
 
-#puts csv_string.length
-pp csv_string
 #puts csv_string.to_a
-
+pp csv_string
 
 # HEADER: features -> [0,0..2] train_i ->[0, 3... total trains+2]
 # DATA-general: city -> [1,0] total_trains_out -> [1,1] total_destinations -> [1,2] 
 # DATA-stops: train_i -> [1, 3... total trains+2]
 
-puts "Printing ..."
-
-def printHashCSV_Header(csv_string, larger_trains)
+def printHashCSV_Header(csv_string, larger_trains, f_stations_csv)
 	#Write header trains
 	for i in (0).upto(2)
+		 File.open(f_stations_csv, 'a') do |file|
+    		file.print csv_string[[0,i]] + ","
+  		end
 		print csv_string[[0,i]] + ","
 	end	
 
 	#Write header
-	for z in (0).upto(larger_trains-1)
+	for z in (0).upto(larger_trains)
+	    File.open(f_stations_csv, 'a') do |file|
+    		file.print csv_string[[0,z+3]]= "train_#{z+1}" + ","
+  		end
 		print csv_string[[0,z+3]]= "train_#{z+1}" + ","
 	end	
 end
 
-def printHashCSV_Data(csv_string, nstation)	
+def printHashCSV_Data(csv_string, nstation, f_stations_csv)	
 	
-	puts ""
+	
+	File.open(f_stations_csv, 'a') do |file|
+    	file.puts ""
+  	end
+  	puts ""
+
 	ntrains = csv_string[[nstation+1, 1]]
 
    
 	#Write DATA-general-station
 	
-	print csv_string[[nstation+1,0]] + ","
+	File.open(f_stations_csv, 'a') do |file|
+    	file.print "#{csv_string[[nstation+1,0]]}" + ","
+    	file.print "#{csv_string[[nstation+1,1]]}"	+ ","
+		file.print "#{csv_string[[nstation+1,2]]}"	+ ","
+  	end
+
+	print "#{csv_string[[nstation+1,0]]}"	+ ","
 	print "#{csv_string[[nstation+1,1]]}"	+ ","
 	print "#{csv_string[[nstation+1,2]]}"	+ ","
 
 	#Write DATA-stops
 	
-	for k in (3).upto(ntrains) 
-		print csv_string[[nstation+1,k]] + ","
+	for k in (3).upto(ntrains+2) 
+	  File.open(f_stations_csv, 'a') do |file|
+    	file.print csv_string[[nstation+1,k]] + ","
+  	  end
+	print csv_string[[nstation+1,k]] + ","
 	end
 
-
+	File.open(f_stations_csv, 'a') do |file|
+    	file.puts ""
+  	end
 	puts ""
 end  
 
-printHashCSV_Header(csv_string, larger_trains)
-nstation = 0
-printHashCSV_Data(csv_string, nstation)
+# Writing Stations to file
 
-#theCSV = csv_string.values.to_csv
-#puts theCSV
+puts "Printing and writing to file..."
+#Write header
+printHashCSV_Header(csv_string, larger_trains, f_stations_csv)
 
-
-#coll_stations.find().each { |row| p row }
-		#csv_string[3] = "|6.43| Zamora (INTERCITY34) -> |7.23| Calatrava (INTERCITY34) -> "
-		#csv_string[4] = "|18.13| Zamora (AVE145) -> |20.34| Madrid (AVE145) -> "
-
-
-
-#File.open(my_stations_json, 'w') { |file| file.write(my_stations) }
-
-#puts "There are #{coll_stations.count} records as Stations"
-
-# ---- Write to file as CVS --------
-
-#puts my_trains
-
-#json = File.read('./SecondTest/mini-test.json')
-#stations = JSON.parse(json)
-
-#puts stations[0]["trains"][0]["t57-4_ref"]
-
-#pp stations.select{|key, value| hash["t957-2_to"] == "Navalmoral de la Mata" }
-#puts stations[0]["trains"]
-##pp stations
+#Write DATA
+for o in (0).upto(total_cityStations) 
+nstation = o
+printHashCSV_Data(csv_string, nstation, f_stations_csv)
+end
