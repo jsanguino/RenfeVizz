@@ -10,100 +10,133 @@ db = mongo_client.db("renfe_vizz")
 coll_stations = db.collection("stations")
 coll_trains = db.collection("trains")
 
-# ---- Storing collections
+# ---- Storing collections as JSON files
 my_stations = coll_stations.find().to_a.to_json
 my_trains = coll_trains.find().to_a.to_json
 
+# ---- Files to be written as JSON or CSV--------
 
-# ---- Queries --------
+my_stations_json = "stations.json"
+my_stations_csv = "stations.csv"
+my_trains_json = "trains.json"
+my_trains_csv = "trains.csv"
+
+# ---- Write Stations to CVS --------
 
 #puts coll_stations.find().to_a
 
-#pp coll_stations.find({}, {:limit => 1, :sort => { "trains.$.dep_time.$.total_time" => -1 }}).to_a
-
-thisStation = coll_stations.find({}, {:limit => 1}).to_a
-#puts thisStation[0]["oCity"]
-
-#puts thisStation.length
-#puts thisStation[0]["trains"].length
-#puts thisStation[0]["trains"][0]["stops"].length
-
-#puts thisStation[0]["trains"][0]["stops"][0]["arriv_time"]
-#puts thisStation[0]["trains"][0]["stops"][0]["station_id"]
-#puts thisStation[0]["trains"][0]["stops"][0]["train_name"]
-
-#csv_string[3] = "|6.43| Zamora (INTERCITY34) -> |7.23| Calatrava (INTERCITY34) -> "
-#csv_string[4] = "|18.13| Zamora (AVE145) -> |20.34| Madrid (AVE145) -> "
-
-#csv_string = Array.new
-stops_string = Array.new
-stops_string[3] = String.new
-#csv_string[3] = String.new
+cityStations = coll_stations.find({}, {:limit => 2}).to_a
 
 csv_string = Hash.new
-#csv_string[[0,0]]= 23
-#csv_string[[0,1]]= 42
-#csv_string[[0,2]]=
-csv_string[[0,3]]= String.new
+csv_string[[0,0]]= "oCity"
+csv_string[[0,1]]= "total_trains_out"
+csv_string[[0,2]]= "total_destinations"
 
-for i in (0).upto(1)
-	for j in (0).upto(1)
+stops_string = Array.new
+stops_string[0] = String.new
+larger_trains = 0
 
-		stops_string[3] = "|| " << thisStation[i]["trains"][j]["dep_time"] << " |||** " << thisStation[i]["oCity"] << " **|||"
+#Traverse every Station of every city 
+for i in (0).upto(cityStations.length-1)
+	for j in (0).upto(cityStations[i]["trains"].length-1)
 
-		for k in (0).upto(thisStation[i]["trains"][j]["stops"].length-1)
+		#Actions per new train at a given time
+		csv_string[[i+1,j+3]]= String.new
+		stops_string[0] = "|| " << cityStations[i]["trains"][j]["dep_time"] << " |||** " << cityStations[i]["oCity"] << " **|||"
 
-#for i in (0).upto(thisStation.length-1)
-#	for j in (0).upto(thisStation[i]["trains"].length-1)
-#		for k in (0).upto(thisStation[i]["trains"][j]["stops"].length-1)
+		for k in (0).upto(cityStations[i]["trains"][j]["stops"].length-1)
 
-		puts "let's go with #{i} #{j} #{k}"
+		#Actions per stop 
+		#puts "let's go with #{i} #{j} #{k}"
 		
-		csv_string[[i,0]] = thisStation[i]["oCity"] 
+		#Train station origin City
+		csv_string[[i+1,0]] = cityStations[i]["oCity"] 
 		#Trains trains_out
-		csv_string[[i,1]] = thisStation[i]["total_trains_out"] 
+		csv_string[[i+1,1]] = j+1
+		if j >= larger_trains
+		larger_trains = j 
+		end
+		#puts larger_trains
 		#Total destinations
-		csv_string[[i,2]] = thisStation[i]["total_destinations"]
+		csv_string[[i+1,2]] = cityStations[i]["total_destinations"]
 		
-		 
+		#Trains Descriptions concatenation from i to trains_out
+		stops_string[0] = stops_string[0] << " --> | " <<  cityStations[i]["trains"][j]["stops"][k]["arriv_time"] << " | " << 
+		cityStations[i]["trains"][j]["stops"][k]["station_id"] << " ( " <<
+			cityStations[i]["trains"][j]["stops"][k]["train_name"] << " )"
 
-		#Trains Descriptions from i to trains_out
-		stops_string[3] = stops_string[3] << " --> | " <<  thisStation[i]["trains"][j]["stops"][k]["arriv_time"] << " | " << 
-						  thisStation[i]["trains"][j]["stops"][k]["station_id"] << " ( " <<
-						  thisStation[i]["trains"][j]["stops"][k]["train_name"] << " )"
-		
-		#puts stops_string
+		end
 
-		#theCSV = csv_string.to_csv
-		#puts theCSV
+   	   #Add concatenation to csv_string hash
+   	   csv_string[[i+1,j+3]] = stops_string[0]
+   	   stops_string[0] = String.new
 
-   	   end
-   	   csv_string[[i,j+3]] = stops_string[3]
-   	   stops_string[3] = String.new
-   	   theCSV = csv_string.values.to_csv
-   	   puts theCSV
+   	end
+
    end
-#Add a new line to the CSV per station
 
-#theCSV = csv_string.to_csv
-#puts theCSV
+#puts csv_string.length
+pp csv_string
+#puts csv_string.to_a
 
+
+# HEADER: features -> [0,0..2] train_i ->[0, 3... total trains+2]
+# DATA-general: city -> [1,0] total_trains_out -> [1,1] total_destinations -> [1,2] 
+# DATA-stops: train_i -> [1, 3... total trains+2]
+
+puts "Printing ..."
+
+def printHashCSV_Header(csv_string, larger_trains)
+	#Write header trains
+	for i in (0).upto(2)
+		print csv_string[[0,i]] + ","
+	end	
+
+	#Write header
+	for z in (0).upto(larger_trains-1)
+		print csv_string[[0,z+3]]= "train_#{z+1}" + ","
+	end	
 end
 
+def printHashCSV_Data(csv_string, nstation)	
+	
+	puts ""
+	ntrains = csv_string[[nstation+1, 1]]
+
+   
+	#Write DATA-general-station
+	
+	print csv_string[[nstation+1,0]] + ","
+	print "#{csv_string[[nstation+1,1]]}"	+ ","
+	print "#{csv_string[[nstation+1,2]]}"	+ ","
+
+	#Write DATA-stops
+	
+	for k in (3).upto(ntrains) 
+		print csv_string[[nstation+1,k]] + ","
+	end
+
+
+	puts ""
+end  
+
+printHashCSV_Header(csv_string, larger_trains)
+nstation = 0
+printHashCSV_Data(csv_string, nstation)
+
+#theCSV = csv_string.values.to_csv
+#puts theCSV
 
 
 #coll_stations.find().each { |row| p row }
 		#csv_string[3] = "|6.43| Zamora (INTERCITY34) -> |7.23| Calatrava (INTERCITY34) -> "
 		#csv_string[4] = "|18.13| Zamora (AVE145) -> |20.34| Madrid (AVE145) -> "
 
-# ---- Write to file as JSON --------
 
-my_stations_f = "stations.json"
-my_trains_f = "trains.json"
 
-#File.open(my_stations_f, 'w') { |file| file.write(my_stations) }
+#File.open(my_stations_json, 'w') { |file| file.write(my_stations) }
 
-puts "There are #{coll_stations.count} records as Stations"
+#puts "There are #{coll_stations.count} records as Stations"
 
 # ---- Write to file as CVS --------
 
