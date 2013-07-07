@@ -35,32 +35,39 @@ thisStation = coll_stations.find({}, {:limit => 1}).to_a
 #csv_string[3] = "|6.43| Zamora (INTERCITY34) -> |7.23| Calatrava (INTERCITY34) -> "
 #csv_string[4] = "|18.13| Zamora (AVE145) -> |20.34| Madrid (AVE145) -> "
 
-csv_string = Array.new
+csv_string = Hash.new
+stops_string = Hash.new
+stops_string[3] = String.new
+#csv_string[3] = String.new
 
-for i in (0).upto(thisStation.length)
-	for j in (0).upto(thisStation[i]["trains"].length)
-		for k in (0).upto(thisStation[i]["trains"][j]["stops"].length)
+for i in (0).upto(thisStation.length-1)
+	for j in (0).upto(thisStation[i]["trains"].length-1)
+		for k in (0).upto(thisStation[i]["trains"][j]["stops"].length-1)
 		
-		csv_string[0] = thisStation[i]["oCity"] 
+		csv_string[i][0] = thisStation[i]["oCity"] 
 		#Trains trains_out
-		csv_string[1] = thisStation[i]["total_trains_out"] 
+		csv_string[i][1] = thisStation[i]["total_trains_out"] 
 		#Total destinations
-		csv_string[2] = thisStation[i]["total_destinations"]
-
-		n = k+3
+		csv_string[i][2] = thisStation[i]["total_destinations"]
 	
 		#Trains Descriptions from i to trains_out
-		csv_string[n] = "| " <<  thisStation[i]["trains"][j]["stops"][k]["arriv_time"] << " | " << 
+		stops_string[i][3] = stops_string[3] << "| " <<  thisStation[i]["trains"][j]["stops"][k]["arriv_time"] << " | " << 
 						  thisStation[i]["trains"][j]["stops"][k]["station_id"] << "( " <<
 						  thisStation[i]["trains"][j]["stops"][k]["train_name"] << " ) ->"
-		theCSV = csv_string.to_csv
-		puts theCSV
+		
+		#puts stops_string
+
+		#theCSV = csv_string.to_csv
+		#puts theCSV
 
    	   end
+   	   csv_string[3] = stops_string[i][3]
+   	   puts csv_string
    end
 #Add a new line to the CSV per station
-theCSV = csv_string.to_csv
-puts theCSV
+
+#theCSV = csv_string.to_csv
+#puts theCSV
 
 end
 
