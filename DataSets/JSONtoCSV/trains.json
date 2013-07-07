@@ -1,0 +1,1576 @@
+[
+   {
+      "_id":{
+         "$oid":"51d87648059c4403961a89a6"
+      },
+      "stops":[
+         {
+            "arriv_time":"19.27",
+            "station":"Santiago de Compostela"
+         },
+         {
+            "arriv_time":"14.20",
+            "station":"Zamora"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"99270LD"
+   },
+   {
+      "_id":{
+         "$oid":"51d8766b059c4403961a89b0"
+      },
+      "stops":[
+         {
+            "arriv_time":"10.18",
+            "station":"Valladolid Campo Grande"
+         },
+         {
+            "arriv_time":"08.45",
+            "station":"Zamora"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"18321MD"
+   },
+   {
+      "_id":{
+         "$oid":"51d8767b059c4403961a89b3"
+      },
+      "stops":[
+         {
+            "arriv_time":"19.09",
+            "station":"Villena AV"
+         },
+         {
+            "arriv_time":"12.40",
+            "station":"Zamora"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"99257LD"
+   },
+   {
+      "_id":{
+         "$oid":"51d87638059c4403961a89a3"
+      },
+      "stops":[
+         {
+            "arriv_time":"22.36",
+            "station":"Salamanca (*)"
+         },
+         {
+            "arriv_time":"19.46",
+            "station":"Zamora"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"99154LD-MD"
+   },
+   {
+      "_id":{
+         "$oid":"51d8763e059c4403961a89a4"
+      },
+      "stops":[
+         {
+            "arriv_time":"20.09",
+            "station":"San Fernando (*)"
+         },
+         {
+            "arriv_time":"12.40",
+            "station":"Zamora"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"99260LD-AVE"
+   },
+   {
+      "_id":{
+         "$oid":"51d8764f059c4403961a89a9"
+      },
+      "stops":[
+         {
+            "arriv_time":"21.18",
+            "station":"Segovia (*)"
+         },
+         {
+            "arriv_time":"19.46",
+            "station":"Zamora"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"04154ALVIA"
+   },
+   {
+      "_id":{
+         "$oid":"51d8764f059c4403961a89aa"
+      },
+      "stops":[
+         {
+            "arriv_time":"17.17",
+            "station":"Segovia (*)"
+         },
+         {
+            "arriv_time":"15.38",
+            "station":"Zamora"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"10094INTERCITY"
+   },
+   {
+      "_id":{
+         "$oid":"51d8764f059c4403961a89ab"
+      },
+      "stops":[
+         {
+            "arriv_time":"17.17",
+            "station":"Segovia (*)"
+         },
+         {
+            "arriv_time":"15.38",
+            "station":"Zamora"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"04094ALVIA"
+   },
+   {
+      "_id":{
+         "$oid":"51d8764f059c4403961a89ac"
+      },
+      "stops":[
+         {
+            "arriv_time":"14.10",
+            "station":"Segovia (*)"
+         },
+         {
+            "arriv_time":"12.40",
+            "station":"Zamora"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"04084ALVIA"
+   },
+   {
+      "_id":{
+         "$oid":"51d87656059c4403961a89ad"
+      },
+      "stops":[
+         {
+            "arriv_time":"21.35",
+            "station":"Sevilla"
+         },
+         {
+            "arriv_time":"15.38",
+            "station":"Zamora"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"99265LD-AVE"
+   },
+   {
+      "_id":{
+         "$oid":"51d87656059c4403961a89ae"
+      },
+      "stops":[
+         {
+            "arriv_time":"18.30",
+            "station":"Sevilla"
+         },
+         {
+            "arriv_time":"12.40",
+            "station":"Zamora"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"99259LD-AVE"
+   },
+   {
+      "_id":{
+         "$oid":"51d87665059c4403961a89af"
+      },
+      "stops":[
+         {
+            "arriv_time":"20.18",
+            "station":"Valencia (*)"
+         },
+         {
+            "arriv_time":"15.38",
+            "station":"Zamora"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"99263MD-AVE"
+   },
+   {
+      "_id":{
+         "$oid":"51d87630059c4403961a89a2"
+      },
+      "stops":[
+         {
+            "arriv_time":"17.05",
+            "station":"Requena / Utiel"
+         },
+         {
+            "arriv_time":"12.40",
+            "station":"Zamora"
+         },
+         {
+            "arriv_time":"17.30",
+            "station":"Valencia (*)"
+         }
+      ],
+      "total_stops":4,
+      "train_name":"99261LD-AVE"
+   },
+   {
+      "_id":{
+         "$oid":"51d87648059c4403961a89a5"
+      },
+      "stops":[
+         {
+            "arriv_time":"20.41",
+            "station":"Santiago de Compostela"
+         },
+         {
+            "arriv_time":"17.01",
+            "station":"Zamora"
+         },
+         {
+            "arriv_time":"21.29",
+            "station":"Vigo Guixar"
+         }
+      ],
+      "total_stops":4,
+      "train_name":"04155ALVIA"
+   },
+   {
+      "_id":{
+         "$oid":"51d87672059c4403961a89b1"
+      },
+      "stops":[
+         {
+            "arriv_time":"22.45",
+            "station":"Vigo Guixar"
+         },
+         {
+            "arriv_time":"17.01",
+            "station":"Zamora"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"99541LD-MD"
+   },
+   {
+      "_id":{
+         "$oid":"51d87672059c4403961a89b2"
+      },
+      "stops":[
+         {
+            "arriv_time":"19.22",
+            "station":"Vigo Guixar"
+         },
+         {
+            "arriv_time":"14.20",
+            "station":"Zamora"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"99295LD"
+   },
+   {
+      "_id":{
+         "$oid":"51d87648059c4403961a89a7"
+      },
+      "stops":[
+         {
+            "arriv_time":"12.50",
+            "station":"Santiago de Compostela"
+         },
+         {
+            "arriv_time":"09.17",
+            "station":"Zamora"
+         },
+         {
+            "arriv_time":"13.32",
+            "station":"Vigo Guixar"
+         }
+      ],
+      "total_stops":4,
+      "train_name":"04075ALVIA"
+   },
+   {
+      "_id":{
+         "$oid":"51d87648059c4403961a89a8"
+      },
+      "stops":[
+         {
+            "arriv_time":"07.03",
+            "station":"Santiago de Compostela"
+         },
+         {
+            "arriv_time":"01.46",
+            "station":"Zamora"
+         },
+         {
+            "arriv_time":"06.57",
+            "station":"Vigo Guixar"
+         }
+      ],
+      "total_stops":4,
+      "train_name":"00851TRENHOTEL"
+   },
+   {
+      "_id":{
+         "$oid":"51d87696059c4403961a89bb"
+      },
+      "stops":[
+         {
+            "arriv_time":"22.36",
+            "station":"Salamanca (*)"
+         },
+         {
+            "arriv_time":"16.08",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"99310LD-MD"
+   },
+   {
+      "_id":{
+         "$oid":"51d8769d059c4403961a89bc"
+      },
+      "stops":[
+         {
+            "arriv_time":"23.20",
+            "station":"San Fernando (*)"
+         },
+         {
+            "arriv_time":"17.33",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"99142AVE-MD"
+   },
+   {
+      "_id":{
+         "$oid":"51d8769d059c4403961a89bd"
+      },
+      "stops":[
+         {
+            "arriv_time":"20.09",
+            "station":"San Fernando (*)"
+         },
+         {
+            "arriv_time":"13.43",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"99570AVE-LD"
+   },
+   {
+      "_id":{
+         "$oid":"51d876ac059c4403961a89c0"
+      },
+      "stops":[
+         {
+            "arriv_time":"10.08",
+            "station":"Santiago de Compostela"
+         },
+         {
+            "arriv_time":"22.50",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"99216LD-AVANT"
+   },
+   {
+      "_id":{
+         "$oid":"51d876ac059c4403961a89c1"
+      },
+      "stops":[
+         {
+            "arriv_time":"21.50",
+            "station":"Santiago de Compostela"
+         },
+         {
+            "arriv_time":"11.28",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"99723LD-AVANT"
+   },
+   {
+      "_id":{
+         "$oid":"51d87690059c4403961a89ba"
+      },
+      "stops":[
+         {
+            "arriv_time":"13.32",
+            "station":"Sahagún"
+         },
+         {
+            "arriv_time":"06.14",
+            "station":"Zaragoza (*)"
+         },
+         {
+            "arriv_time":"19.27",
+            "station":"Santiago de Compostela"
+         }
+      ],
+      "total_stops":4,
+      "train_name":"99113MD-LD"
+   },
+   {
+      "_id":{
+         "$oid":"51d876be059c4403961a89c3"
+      },
+      "stops":[
+         {
+            "arriv_time":"22.30",
+            "station":"Sevilla"
+         },
+         {
+            "arriv_time":"18.30",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"99089AVE"
+   },
+   {
+      "_id":{
+         "$oid":"51d876be059c4403961a89c4"
+      },
+      "stops":[
+         {
+            "arriv_time":"21.15",
+            "station":"Sevilla"
+         },
+         {
+            "arriv_time":"17.33",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"03942AVE"
+   },
+   {
+      "_id":{
+         "$oid":"51d876be059c4403961a89c5"
+      },
+      "stops":[
+         {
+            "arriv_time":"18.30",
+            "station":"Sevilla"
+         },
+         {
+            "arriv_time":"13.43",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"99569AVE"
+   },
+   {
+      "_id":{
+         "$oid":"51d876be059c4403961a89c6"
+      },
+      "stops":[
+         {
+            "arriv_time":"16.30",
+            "station":"Sevilla"
+         },
+         {
+            "arriv_time":"12.26",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"99091AVE"
+   },
+   {
+      "_id":{
+         "$oid":"51d876be059c4403961a89c7"
+      },
+      "stops":[
+         {
+            "arriv_time":"14.30",
+            "station":"Sevilla"
+         },
+         {
+            "arriv_time":"10.26",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"99559AVE"
+   },
+   {
+      "_id":{
+         "$oid":"51d876be059c4403961a89c8"
+      },
+      "stops":[
+         {
+            "arriv_time":"14.02",
+            "station":"Sevilla"
+         },
+         {
+            "arriv_time":"10.20",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"03940AVE"
+   },
+   {
+      "_id":{
+         "$oid":"51d876d6059c4403961a89c9"
+      },
+      "stops":[
+         {
+            "arriv_time":"23.02",
+            "station":"Tarragona (*)"
+         },
+         {
+            "arriv_time":"21.51",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"03203AVE"
+   },
+   {
+      "_id":{
+         "$oid":"51d876d6059c4403961a89ca"
+      },
+      "stops":[
+         {
+            "arriv_time":"22.03",
+            "station":"Tarragona (*)"
+         },
+         {
+            "arriv_time":"20.52",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"03193AVE"
+   },
+   {
+      "_id":{
+         "$oid":"51d876d6059c4403961a89cb"
+      },
+      "stops":[
+         {
+            "arriv_time":"21.26",
+            "station":"Tarragona (*)"
+         },
+         {
+            "arriv_time":"19.52",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"00437ALVIA"
+   },
+   {
+      "_id":{
+         "$oid":"51d876d6059c4403961a89cc"
+      },
+      "stops":[
+         {
+            "arriv_time":"21.26",
+            "station":"Tarragona (*)"
+         },
+         {
+            "arriv_time":"19.52",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"00537ALVIA"
+   },
+   {
+      "_id":{
+         "$oid":"51d876d6059c4403961a89cd"
+      },
+      "stops":[
+         {
+            "arriv_time":"20.36",
+            "station":"Tarragona (*)"
+         },
+         {
+            "arriv_time":"19.06",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"00625ALVIA"
+   },
+   {
+      "_id":{
+         "$oid":"51d876d6059c4403961a89ce"
+      },
+      "stops":[
+         {
+            "arriv_time":"20.03",
+            "station":"Tarragona (*)"
+         },
+         {
+            "arriv_time":"18.52",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"03173AVE"
+   },
+   {
+      "_id":{
+         "$oid":"51d876d6059c4403961a89cf"
+      },
+      "stops":[
+         {
+            "arriv_time":"19.45",
+            "station":"Tarragona (*)"
+         },
+         {
+            "arriv_time":"18.31",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"03941AVE"
+   },
+   {
+      "_id":{
+         "$oid":"51d876d6059c4403961a89d0"
+      },
+      "stops":[
+         {
+            "arriv_time":"19.45",
+            "station":"Tarragona (*)"
+         },
+         {
+            "arriv_time":"18.31",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"03991AVE"
+   },
+   {
+      "_id":{
+         "$oid":"51d876d6059c4403961a89d1"
+      },
+      "stops":[
+         {
+            "arriv_time":"18.43",
+            "station":"Tarragona (*)"
+         },
+         {
+            "arriv_time":"17.46",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"03163AVE"
+   },
+   {
+      "_id":{
+         "$oid":"51d876d6059c4403961a89d2"
+      },
+      "stops":[
+         {
+            "arriv_time":"18.03",
+            "station":"Tarragona (*)"
+         },
+         {
+            "arriv_time":"16.52",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"03153AVE"
+   },
+   {
+      "_id":{
+         "$oid":"51d876d6059c4403961a89d3"
+      },
+      "stops":[
+         {
+            "arriv_time":"18.11",
+            "station":"Tarragona (*)"
+         },
+         {
+            "arriv_time":"16.37",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"00661ALVIA"
+   },
+   {
+      "_id":{
+         "$oid":"51d87687059c4403961a89b5"
+      },
+      "stops":[
+         {
+            "arriv_time":"20.07",
+            "station":"Reus"
+         },
+         {
+            "arriv_time":"16.30",
+            "station":"Zaragoza (*)"
+         },
+         {
+            "arriv_time":"20.22",
+            "station":"Tarragona (*)"
+         }
+      ],
+      "total_stops":4,
+      "train_name":"15016R.EXPRESS"
+   },
+   {
+      "_id":{
+         "$oid":"51d876d6059c4403961a89d4"
+      },
+      "stops":[
+         {
+            "arriv_time":"15.57",
+            "station":"Tarragona (*)"
+         },
+         {
+            "arriv_time":"14.39",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"00651INTERCITY"
+   },
+   {
+      "_id":{
+         "$oid":"51d876d6059c4403961a89d5"
+      },
+      "stops":[
+         {
+            "arriv_time":"15.29",
+            "station":"Tarragona (*)"
+         },
+         {
+            "arriv_time":"14.32",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"03333AVE"
+   },
+   {
+      "_id":{
+         "$oid":"51d876d6059c4403961a89d6"
+      },
+      "stops":[
+         {
+            "arriv_time":"14.03",
+            "station":"Tarragona (*)"
+         },
+         {
+            "arriv_time":"12.52",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"03113AVE"
+   },
+   {
+      "_id":{
+         "$oid":"51d876d6059c4403961a89d7"
+      },
+      "stops":[
+         {
+            "arriv_time":"13.49",
+            "station":"Tarragona (*)"
+         },
+         {
+            "arriv_time":"12.36",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"03943AVE"
+   },
+   {
+      "_id":{
+         "$oid":"51d876d6059c4403961a89d8"
+      },
+      "stops":[
+         {
+            "arriv_time":"13.49",
+            "station":"Tarragona (*)"
+         },
+         {
+            "arriv_time":"12.36",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"03993AVE"
+   },
+   {
+      "_id":{
+         "$oid":"51d876d6059c4403961a89d9"
+      },
+      "stops":[
+         {
+            "arriv_time":"13.27",
+            "station":"Tarragona (*)"
+         },
+         {
+            "arriv_time":"12.06",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"00631INTERCITY"
+   },
+   {
+      "_id":{
+         "$oid":"51d876d6059c4403961a89da"
+      },
+      "stops":[
+         {
+            "arriv_time":"12.43",
+            "station":"Tarragona (*)"
+         },
+         {
+            "arriv_time":"11.46",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"03103AVE"
+   },
+   {
+      "_id":{
+         "$oid":"51d876d6059c4403961a89db"
+      },
+      "stops":[
+         {
+            "arriv_time":"12.36",
+            "station":"Tarragona (*)"
+         },
+         {
+            "arriv_time":"11.13",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"00433ALVIA"
+   },
+   {
+      "_id":{
+         "$oid":"51d876d6059c4403961a89dc"
+      },
+      "stops":[
+         {
+            "arriv_time":"12.36",
+            "station":"Tarragona (*)"
+         },
+         {
+            "arriv_time":"11.13",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"00533ALVIA"
+   },
+   {
+      "_id":{
+         "$oid":"51d876d6059c4403961a89dd"
+      },
+      "stops":[
+         {
+            "arriv_time":"12.03",
+            "station":"Tarragona (*)"
+         },
+         {
+            "arriv_time":"10.52",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"03093AVE"
+   },
+   {
+      "_id":{
+         "$oid":"51d876d6059c4403961a89de"
+      },
+      "stops":[
+         {
+            "arriv_time":"10.43",
+            "station":"Tarragona (*)"
+         },
+         {
+            "arriv_time":"09.46",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"03083AVE"
+   },
+   {
+      "_id":{
+         "$oid":"51d876d6059c4403961a89df"
+      },
+      "stops":[
+         {
+            "arriv_time":"10.03",
+            "station":"Tarragona (*)"
+         },
+         {
+            "arriv_time":"08.52",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"03073AVE"
+   },
+   {
+      "_id":{
+         "$oid":"51d876d6059c4403961a89e0"
+      },
+      "stops":[
+         {
+            "arriv_time":"09.28",
+            "station":"Tarragona (*)"
+         },
+         {
+            "arriv_time":"08.10",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"00635INTERCITY"
+   },
+   {
+      "_id":{
+         "$oid":"51d876d6059c4403961a89e1"
+      },
+      "stops":[
+         {
+            "arriv_time":"08.17",
+            "station":"Tarragona (*)"
+         },
+         {
+            "arriv_time":"07.06",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"03053AVE"
+   },
+   {
+      "_id":{
+         "$oid":"51d876d6059c4403961a89e2"
+      },
+      "stops":[
+         {
+            "arriv_time":"08.02",
+            "station":"Tarragona (*)"
+         },
+         {
+            "arriv_time":"06.32",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"00921TRENHOTEL"
+   },
+   {
+      "_id":{
+         "$oid":"51d87687059c4403961a89b7"
+      },
+      "stops":[
+         {
+            "arriv_time":"05.28",
+            "station":"Reus"
+         },
+         {
+            "arriv_time":"02.20",
+            "station":"Zaragoza (*)"
+         },
+         {
+            "arriv_time":"05.44",
+            "station":"Tarragona (*)"
+         }
+      ],
+      "total_stops":4,
+      "train_name":"00370ESTRELLA"
+   },
+   {
+      "_id":{
+         "$oid":"51d876de059c4403961a89e3"
+      },
+      "stops":[
+         {
+            "arriv_time":"21.58",
+            "station":"Teruel"
+         },
+         {
+            "arriv_time":"19.25",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"18517REGIONAL"
+   },
+   {
+      "_id":{
+         "$oid":"51d876ee059c4403961a89e8"
+      },
+      "stops":[
+         {
+            "arriv_time":"22.02",
+            "station":"Tudela de Navarra"
+         },
+         {
+            "arriv_time":"21.05",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"18079R.EXPRESS"
+   },
+   {
+      "_id":{
+         "$oid":"51d876ee059c4403961a89e9"
+      },
+      "stops":[
+         {
+            "arriv_time":"21.28",
+            "station":"Tudela de Navarra"
+         },
+         {
+            "arriv_time":"20.49",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"33562MD"
+   },
+   {
+      "_id":{
+         "$oid":"51d876ee059c4403961a89ea"
+      },
+      "stops":[
+         {
+            "arriv_time":"21.28",
+            "station":"Tudela de Navarra"
+         },
+         {
+            "arriv_time":"20.49",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"10562INTERCITY"
+   },
+   {
+      "_id":{
+         "$oid":"51d876ee059c4403961a89eb"
+      },
+      "stops":[
+         {
+            "arriv_time":"20.20",
+            "station":"Tudela de Navarra"
+         },
+         {
+            "arriv_time":"19.17",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"18077R.EXPRESS"
+   },
+   {
+      "_id":{
+         "$oid":"51d876ee059c4403961a89ec"
+      },
+      "stops":[
+         {
+            "arriv_time":"18.37",
+            "station":"Tudela de Navarra"
+         },
+         {
+            "arriv_time":"17.37",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"18075R.EXPRESS"
+   },
+   {
+      "_id":{
+         "$oid":"51d876ee059c4403961a89ed"
+      },
+      "stops":[
+         {
+            "arriv_time":"18.11",
+            "station":"Tudela de Navarra"
+         },
+         {
+            "arriv_time":"17.29",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"00430ALVIA"
+   },
+   {
+      "_id":{
+         "$oid":"51d876a4059c4403961a89be"
+      },
+      "stops":[
+         {
+            "arriv_time":"21.09",
+            "station":"San Sebastián/Donostia"
+         },
+         {
+            "arriv_time":"17.29",
+            "station":"Zaragoza (*)"
+         },
+         {
+            "arriv_time":"18.11",
+            "station":"Tudela de Navarra"
+         }
+      ],
+      "total_stops":4,
+      "train_name":"00530ALVIA"
+   },
+   {
+      "_id":{
+         "$oid":"51d876ee059c4403961a89f0"
+      },
+      "stops":[
+         {
+            "arriv_time":"15.29",
+            "station":"Tudela de Navarra"
+         },
+         {
+            "arriv_time":"14.29",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"18073R.EXPRESS"
+   },
+   {
+      "_id":{
+         "$oid":"51d876ee059c4403961a89f2"
+      },
+      "stops":[
+         {
+            "arriv_time":"13.55",
+            "station":"Tudela de Navarra"
+         },
+         {
+            "arriv_time":"12.55",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"18021R.EXPRESS"
+   },
+   {
+      "_id":{
+         "$oid":"51d876ee059c4403961a89f3"
+      },
+      "stops":[
+         {
+            "arriv_time":"10.15",
+            "station":"Tudela de Navarra"
+         },
+         {
+            "arriv_time":"09.34",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"00434ALVIA"
+   },
+   {
+      "_id":{
+         "$oid":"51d876a4059c4403961a89bf"
+      },
+      "stops":[
+         {
+            "arriv_time":"13.00",
+            "station":"San Sebastián/Donostia"
+         },
+         {
+            "arriv_time":"09.34",
+            "station":"Zaragoza (*)"
+         },
+         {
+            "arriv_time":"10.15",
+            "station":"Tudela de Navarra"
+         }
+      ],
+      "total_stops":4,
+      "train_name":"00534ALVIA"
+   },
+   {
+      "_id":{
+         "$oid":"51d876f5059c4403961a89f5"
+      },
+      "stops":[
+         {
+            "arriv_time":"17.59",
+            "station":"Valdepeñas"
+         },
+         {
+            "arriv_time":"13.43",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"99032AVE-MD"
+   },
+   {
+      "_id":{
+         "$oid":"51d876de059c4403961a89e6"
+      },
+      "stops":[
+         {
+            "arriv_time":"10.22",
+            "station":"Teruel"
+         },
+         {
+            "arriv_time":"08.08",
+            "station":"Zaragoza (*)"
+         },
+         {
+            "arriv_time":"13.12",
+            "station":"Valencia (*)"
+         }
+      ],
+      "total_stops":4,
+      "train_name":"18511INTERCITY"
+   },
+   {
+      "_id":{
+         "$oid":"51d876ee059c4403961a89ee"
+      },
+      "stops":[
+         {
+            "arriv_time":"16.48",
+            "station":"Tudela de Navarra"
+         },
+         {
+            "arriv_time":"16.08",
+            "station":"Zaragoza (*)"
+         },
+         {
+            "arriv_time":"20.56",
+            "station":"Valladolid Campo Grande"
+         }
+      ],
+      "total_stops":4,
+      "train_name":"33632MD"
+   },
+   {
+      "_id":{
+         "$oid":"51d876ee059c4403961a89ef"
+      },
+      "stops":[
+         {
+            "arriv_time":"16.48",
+            "station":"Tudela de Navarra"
+         },
+         {
+            "arriv_time":"16.08",
+            "station":"Zaragoza (*)"
+         },
+         {
+            "arriv_time":"20.56",
+            "station":"Valladolid Campo Grande"
+         }
+      ],
+      "total_stops":4,
+      "train_name":"00632INTERCITY"
+   },
+   {
+      "_id":{
+         "$oid":"51d876b3059c4403961a89c2"
+      },
+      "stops":[
+         {
+            "arriv_time":"10.12",
+            "station":"Segovia (*)"
+         },
+         {
+            "arriv_time":"07.26",
+            "station":"Zaragoza (*)"
+         },
+         {
+            "arriv_time":"10.50",
+            "station":"Valladolid Campo Grande"
+         }
+      ],
+      "total_stops":4,
+      "train_name":"99262AVE-AVANT"
+   },
+   {
+      "_id":{
+         "$oid":"51d876ee059c4403961a89e7"
+      },
+      "stops":[
+         {
+            "arriv_time":"23.57",
+            "station":"Tudela de Navarra"
+         },
+         {
+            "arriv_time":"22.50",
+            "station":"Zaragoza (*)"
+         },
+         {
+            "arriv_time":"11.24",
+            "station":"Vigo Guixar"
+         }
+      ],
+      "total_stops":4,
+      "train_name":"00922TRENHOTEL"
+   },
+   {
+      "_id":{
+         "$oid":"51d876ee059c4403961a89f1"
+      },
+      "stops":[
+         {
+            "arriv_time":"14.55",
+            "station":"Tudela de Navarra"
+         },
+         {
+            "arriv_time":"14.14",
+            "station":"Zaragoza (*)"
+         },
+         {
+            "arriv_time":"17.00",
+            "station":"Vitoria/Gasteiz"
+         }
+      ],
+      "total_stops":4,
+      "train_name":"37764R.EXPRESS"
+   },
+   {
+      "_id":{
+         "$oid":"51d87690059c4403961a89b8"
+      },
+      "stops":[
+         {
+            "arriv_time":"19.36",
+            "station":"Sahagún"
+         },
+         {
+            "arriv_time":"14.14",
+            "station":"Zaragoza (*)"
+         },
+         {
+            "arriv_time":"14.55",
+            "station":"Tudela de Navarra"
+         },
+         {
+            "arriv_time":"17.00",
+            "station":"Vitoria/Gasteiz"
+         }
+      ],
+      "total_stops":6,
+      "train_name":"00664ALVIA"
+   },
+   {
+      "_id":{
+         "$oid":"51d87690059c4403961a89b9"
+      },
+      "stops":[
+         {
+            "arriv_time":"16.42",
+            "station":"Sahagún"
+         },
+         {
+            "arriv_time":"11.28",
+            "station":"Zaragoza (*)"
+         },
+         {
+            "arriv_time":"12.11",
+            "station":"Tudela de Navarra"
+         },
+         {
+            "arriv_time":"23.03",
+            "station":"Vigo Guixar"
+         },
+         {
+            "arriv_time":"14.08",
+            "station":"Vitoria/Gasteiz"
+         }
+      ],
+      "total_stops":8,
+      "train_name":"00622ALVIA"
+   },
+   {
+      "_id":{
+         "$oid":"51d876ee059c4403961a89f4"
+      },
+      "stops":[
+         {
+            "arriv_time":"07.13",
+            "station":"Tudela de Navarra"
+         },
+         {
+            "arriv_time":"06.14",
+            "station":"Zaragoza (*)"
+         },
+         {
+            "arriv_time":"09.50",
+            "station":"Vitoria/Gasteiz"
+         }
+      ],
+      "total_stops":4,
+      "train_name":"18071R.EXPRESS"
+   },
+   {
+      "_id":{
+         "$oid":"51d876de059c4403961a89e5"
+      },
+      "stops":[
+         {
+            "arriv_time":"13.30",
+            "station":"Teruel"
+         },
+         {
+            "arriv_time":"11.10",
+            "station":"Zaragoza (*)"
+         },
+         {
+            "arriv_time":"16.18",
+            "station":"Valencia (*)"
+         },
+         {
+            "arriv_time":"17.41",
+            "station":"Villena"
+         },
+         {
+            "arriv_time":"17.10",
+            "station":"XÃ tiva"
+         }
+      ],
+      "total_stops":8,
+      "train_name":"18523INTERCITY"
+   },
+   {
+      "_id":{
+         "$oid":"51d8772a059c4403961a89f6"
+      },
+      "stops":[
+         {
+            "arriv_time":"20.16",
+            "station":"Zaragoza (*)"
+         },
+         {
+            "arriv_time":"20.12",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"17052REGIONAL"
+   },
+   {
+      "_id":{
+         "$oid":"51d876de059c4403961a89e4"
+      },
+      "stops":[
+         {
+            "arriv_time":"19.28",
+            "station":"Teruel"
+         },
+         {
+            "arriv_time":"17.07",
+            "station":"Zaragoza (*)"
+         },
+         {
+            "arriv_time":"22.19",
+            "station":"Valencia (*)"
+         },
+         {
+            "arriv_time":"17.10",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":6,
+      "train_name":"18515INTERCITY"
+   },
+   {
+      "_id":{
+         "$oid":"51d8772a059c4403961a89f7"
+      },
+      "stops":[
+         {
+            "arriv_time":"13.58",
+            "station":"Zaragoza (*)"
+         },
+         {
+            "arriv_time":"13.54",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"33501R.EXPRESS"
+   },
+   {
+      "_id":{
+         "$oid":"51d87687059c4403961a89b6"
+      },
+      "stops":[
+         {
+            "arriv_time":"15.27",
+            "station":"Reus"
+         },
+         {
+            "arriv_time":"11.57",
+            "station":"Zaragoza (*)"
+         },
+         {
+            "arriv_time":"15.45",
+            "station":"Tarragona (*)"
+         },
+         {
+            "arriv_time":"12.02",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":6,
+      "train_name":"33050R.EXPRESS"
+   },
+   {
+      "_id":{
+         "$oid":"51d8772a059c4403961a89f8"
+      },
+      "stops":[
+         {
+            "arriv_time":"08.56",
+            "station":"Zaragoza (*)"
+         },
+         {
+            "arriv_time":"08.53",
+            "station":"Zaragoza (*)"
+         }
+      ],
+      "total_stops":2,
+      "train_name":"33503REGIONAL"
+   }
+]
