@@ -28,9 +28,11 @@ f_trains_csv = "trains.csv"
 
 # ---- Write Stations to CVS --------
 
-#puts coll_stations.find().to_a
-total_cityStations = 3 
+
+total_cityStations = 95 
 cityStations = coll_stations.find({}, {:limit => total_cityStations}).to_a
+#cityStations = coll_stations.find().to_a
+
 
 csv_string = Hash.new
 csv_string[[0,0]]= "oCity"
