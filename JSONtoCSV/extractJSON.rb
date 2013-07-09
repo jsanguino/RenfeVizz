@@ -51,7 +51,7 @@ for i in (0).upto(cityStations.length-1)
 		#Actions per new train at a given time
 		csv_string[[i+1,j+3]]= String.new
 		stops_string = Array.new
-		stops_string[0] = "|| " << cityStations[i]["trains"][j]["dep_time"] << " |||** " << cityStations[i]["oCity"] << " **|||"
+		stops_string[0] = "|| " << cityStations[i]["oCity"] << " || (" << cityStations[i]["trains"][j]["dep_time"] << ")"
 
 		for k in (0).upto(cityStations[i]["trains"][j]["stops"].length-1)
 
@@ -73,9 +73,9 @@ for i in (0).upto(cityStations.length-1)
 		time_order = cityStations[i]["trains"][j]["stops"][k]["arriv_time"]
 		time_order = time_order.gsub(/(?<=\d).(?=\d)/, '').to_i
 
-		train_info_string = " --> | " <<  cityStations[i]["trains"][j]["stops"][k]["arriv_time"] << " | " << 
-		cityStations[i]["trains"][j]["stops"][k]["station_id"] << " ( " <<
-			cityStations[i]["trains"][j]["stops"][k]["train_name"] << " )"
+		train_info_string = " --> | " <<  cityStations[i]["trains"][j]["stops"][k]["station_id"]  << " (" << 
+		cityStations[i]["trains"][j]["stops"][k]["arriv_time"] << ") / " <<
+			cityStations[i]["trains"][j]["stops"][k]["train_name"] << " /"
 
 		stops_string.insert(time_order, train_info_string)
 
