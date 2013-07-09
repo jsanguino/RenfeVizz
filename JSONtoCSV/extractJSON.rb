@@ -22,7 +22,7 @@ my_stations = coll_stations.find().to_a.to_json
 # ---- Files to be written as JSON or CSV--------
 
 f_stations_json = "stations.json"
-f_stations_csv = "stations.csv"
+f_stations_csv = "stations-simple.csv"
 f_trains_json = "trains.json"
 f_trains_csv = "trains.csv"
 
@@ -40,7 +40,8 @@ csv_string[[0,1]]= "total_trains_out"
 csv_string[[0,2]]= "total_destinations"
 
 stops_string = Array.new
-stops_string[0] = String.new
+#earliest_train = 24
+#earliest_train_name = String.new
 larger_trains = 0
 
 #Traverse every Station of every city 
@@ -49,6 +50,7 @@ for i in (0).upto(cityStations.length-1)
 
 		#Actions per new train at a given time
 		csv_string[[i+1,j+3]]= String.new
+		stops_string = Array.new
 		stops_string[0] = "|| " << cityStations[i]["trains"][j]["dep_time"] << " |||** " << cityStations[i]["oCity"] << " **|||"
 
 		for k in (0).upto(cityStations[i]["trains"][j]["stops"].length-1)
@@ -63,27 +65,40 @@ for i in (0).upto(cityStations.length-1)
 		if j >= larger_trains
 		larger_trains = j 
 		end
-		#puts larger_trains
+
 		#Total destinations
 		csv_string[[i+1,2]] = cityStations[i]["total_destinations"]
 		
 		#Trains Descriptions concatenation from i to trains_out
-		stops_string[0] = stops_string[0] << " --> | " <<  cityStations[i]["trains"][j]["stops"][k]["arriv_time"] << " | " << 
+		time_order = cityStations[i]["trains"][j]["stops"][k]["arriv_time"]
+		time_order = time_order.gsub(/(?<=\d).(?=\d)/, '').to_i
+
+		train_info_string = " --> | " <<  cityStations[i]["trains"][j]["stops"][k]["arriv_time"] << " | " << 
 		cityStations[i]["trains"][j]["stops"][k]["station_id"] << " ( " <<
 			cityStations[i]["trains"][j]["stops"][k]["train_name"] << " )"
+
+		stops_string.insert(time_order, train_info_string)
 
 		end
 
    	   #Add concatenation to csv_string hash
-   	   csv_string[[i+1,j+3]] = stops_string[0]
-   	   stops_string[0] = String.new
+   	   stops_string.compact!
 
+   	   for x in (1).upto(stops_string.length-1)
+   	    stops_string[0] = stops_string[0] + stops_string[x]
+   	   end
+
+   	   #Adding to the big hash to be converted to csv
+   	   csv_string[[i+1,j+3]] = stops_string[0]
+   	   puts "Paradas para #{cityStations[i]["oCity"]} #{csv_string[[i+1,j+3]]}"
+   	   puts " ---------- "
    	end
 
    end
 
 #puts csv_string.to_a
-pp csv_string
+puts "hola"
+#pp csv_string
 
 # HEADER: features -> [0,0..2] train_i ->[0, 3... total trains+2]
 # DATA-general: city -> [1,0] total_trains_out -> [1,1] total_destinations -> [1,2] 
